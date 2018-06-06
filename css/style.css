@@ -1,0 +1,40 @@
+@font-face {
+    font-family: "Open Sans";
+    src: url(../fonts/opensans.woff);
+}
+@font-face {
+    font-family: "Gilroy-ExtraBold";
+    src: url(../fonts/gilroyextrabold.woff);
+	font-weight: 900;
+}
+@font-face {
+    font-family: "Gilroy-Light";
+    src: url(../fonts/gilroylight.woff);
+	font-weight: normal;
+}
+body {
+	margin:0px;
+	padding:0px;
+	font-family: "Open Sans";
+	}
+h2 {
+	font-family: "Gilroy-ExtraBold";
+	font-size: 47px;
+}
+.logo {
+	font-family: "Gilroy-ExtraBold";
+	font-size: 48px;
+}
+footer {
+	background: #464646;	
+}
+
+.white {
+	color: white;
+}
+.yellow {
+	color: #ffc600;
+}
+.black {
+	color: black;
+}
