@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Девайс</title>
+		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
@@ -11,20 +12,25 @@
 			<div class="logo black"><a href="index.html">DEVICE</a></div>
 			<ul>
 				<li>
-					<a href=""><span></span>Поиск по сайту</a>
+					<a href="">Поиск по сайту</a>
+				</li>
+				<form action="/echo" method="post" action="https://echo.htmlacademy.ru">
+					<label for="search" class="visually-hidden">Search</label> 
+					<input type="search" value="Введенный текст">
+					<button>Найти</button>
+				</form>	
+				<li>
+					<a class="enter" href="">Войти</a>
 				</li>
 				<li>
-					<a href=""><span></span>Войти</a>
+					<a class="compare" href="">Сравнить</a>
 				</li>
 				<li>
-					<a href=""><span></span>Сравнить</a>
-				</li>
-				<li>
-					<a href=""><span></span>Корзина</a>
+					<a class="bucket" href="">Корзина</a>
 				</li>
 			</ul>
 			<ul>
-				<li><a href="">Каталог товаров</a><span> +</span>
+				<li><a href="">Каталог товаров</a>
 					<ul>
 						<li><a href="catalog.html">Виртуальная реальность</a></li>
 						<li><a href="catalog.html">Моноподы для селфи</a></li>
@@ -50,50 +56,50 @@
 	
 			<!-- Первый слайд -->
 			<div class="slide">
-			<div class="slide_image">
-				<img src="img/slider-1.png">
+				<div class="slide-image">
+					<img src="img/slider-1.png">
+				</div>
+				<div class="slide-number">
+					<span>
+						01
+					</span>
+				</div>
+				<div class="slide-content">	
+					<h2>
+						Делай селфи,<br>
+						как Бен Стиллер! 
+					</h2>
+					<p>
+						Самая длинная палка для селфи доступна в нашем магазине.
+						Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
+					</p>
+					<a href="#">Подробнее</a>
+					<table>
+						<tr>
+							<td>8,5 м</td>
+							<td>5 кг</td>
+							<td>Карбон</td>
+						</tr>
+						<tr>
+							<td>Длина палки</td>
+							<td>Вес палки</td>
+							<td>Материал</td>
+						</tr>
+					</table>
+				</div>	
 			</div>
-			<div class="slide_number">
-				<span>
-					01
-				</span>
-			</div>
-			<div class="slide_content">	
-				<h2>
-					Делай селфи,<br>
-					как Бен Стиллер! 
-				</h2>
-				<p>
-					Самая длинная палка для селфи доступна в нашем магазине.
-					Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
-				</p>
-				<a href="#">Подробнее</a>
-				<table>
-					<tr>
-						<td>8,5 м</td>
-						<td>5 кг</td>
-						<td>Карбон</td>
-					</tr>
-					<tr>
-						<td>Длина палки</td>
-						<td>Вес палки</td>
-						<td>Материал</td>
-					</tr>
-				</table>
-			</div>	
-		</div>
 		
 			<!-- Второй слайд -->
 			<div class="slide">
-				<div class="slide_image">
+				<div class="slide-image">
 					<img src="img/slider-2.png">
 				</div>
-				<div class="slide_number">
+				<div class="slide-number">
 					<span>
 						02
 					</span>
 				</div>
-				<div class="slide_content">	
+				<div class="slide-content">	
 					<h2>
 						Худеем<br>
 						правильно!
@@ -118,15 +124,15 @@
 		
 			<!-- Третий слайд -->
 			<div class="slide">
-				<div class="slide_image">
+				<div class="slide-image">
 					<img src="img/slider-3.png">
 				</div>
-				<div class="slide_number">
+				<div class="slide-number">
 					<span>
 						03
 					</span>
 				</div>
-				<div class="slide_content">	
+				<div class="slide-content">	
 					<h2>
 						Порхает как бабочка,<br>
 						жалит как пчела!
@@ -159,50 +165,32 @@
 	
 		<section class="goods">
 			<a href="#">
-				<div class="goods_item">
-					<div>
-						<img src="img/popular-1.svg">
-					</div>
+				<div class="goods-item">
 					<p>Виртуальная реальность</p>
 				</div>
 			</a>	
 			<a href="#">
-				<div class="goods_item">
-					<div>
-						<img src="img/popular-2.svg">
-					</div>
+				<div class="goods-item">
 					<p>Моноподы для селфи</p>
 				</div>
 			</a>
 			<a href="#">
-				<div class="goods_item">
-					<div>
-						<img src="img/popular-3.svg">
-					</div>
+				<div class="goods-item">
 					<p>Экшн-камеры</p>
 				</div>
 			</a>
 			<a href="#">
 				<div class="goods_item">
-					<div>
-						<img src="img/popular-4.svg">
-					</div>
 					<p>Фитнес-браслеты</p>
 				</div>
 			</a>	
 			<a href="#">
-				<div class="goods_item">
-					<div>
-						<img src="img/popular-5.svg">
-					</div>
+				<div class="goods-item">
 					<p>Умные часы</p>
 				</div>
 			</a>	
 			<a href="#">
-				<div class="goods_item">
-					<div>
-						<img src="img/popular-6.svg">
-					</div>
+				<div class="goods-item">
 					<p>Квадрокоптеры</p>
 				</div>
 			</a>
@@ -226,7 +214,6 @@
 					Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
 					Ведь мы неплохо заработаем, поднимая его на ваш этаж.
 				</p>
-				<img src="img/delivery.svg" width="136px" height="164px" alt="delivery">
 			</div>
 			<div>
 				<h2>Гарантия</h2>
@@ -234,16 +221,13 @@
 					Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>
 					Товар, не дом, конечно же.
 				</p>
-				<img src="img/warranty.svg" width="136px" height="164px" alt="warranty">
 			</div>
 			<div>
 				<h2>Кредит</h2>
 				<p>
 					Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется
 				</p>
-				<img src="img/credit.svg" width="136px" height="164px" alt="credit">
-			</div>
-				
+			</div>	
 		</section>
 	
 		<section class="clients">
@@ -295,6 +279,21 @@
 				<a href="#">Напишите нам</a>
 			</p>
 		</div>
+		<div>
+			<form action="/echo" method="post">
+				<label for="message-username">Ваше имя</label>
+				<input type="text" name="message-username" id="message-username" placeholder="Имя Фамилия" required>
+				
+				<label for="message-mail">Ваш e-mail</label>
+				<input type="text" name="message-mail" id="message-mail" pattern="" placeholder="email@example.com" required>
+				
+				<label for="message-text">Текст письма</label>
+				<textarea rows="5" cols="100" name="message-text" id="message-text" required>В свободной форме
+				</textarea>
+			
+			</form>
+		</div>
+		
 	</section>
 	
 		<footer>
@@ -310,21 +309,33 @@
 					<li><a href="#">Контакты</a></li>
 				</ul>
 				<ul>
-					<li><a href="#">Фейсбук</a></li>
-					<li><a href="#">Инстаграм</a></li>
-					<li><a href="#">Твиттер</a></li>
+					<li>
+						<a href="#">
+							<span class="visually-hidden">Фейсбук</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="visually-hidden">Инстаграм</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="visually-hidden">Твиттер</span>
+						</a>
+					</li>
 				</ul>
 			</div>
 			<div>
-				<ul>
-					<li class="white">
-						<a href="#"><span></span>Войти</a>
+				<ul class="menu-user">
+					<li class="icon bucket">
+						<a class="white" href="">Войти</a>
 					</li>
-					<li class="white">
-						<a href="#"><span></span>Сравнить</a>
+					<li class="icon bucket">
+						<a class="white" href="">Сравнить</a>
 					</li>
-					<li class="white">
-						<a href="#"><span></span>Корзина</a>
+					<li class="icon bucket">
+						<a class="white" href="">Корзина</a>
 					</li>
 				</ul>
 				<p>Тел.: +7 (495) 495-95-95</p>

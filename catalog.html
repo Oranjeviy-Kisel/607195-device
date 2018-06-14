@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Моноподы для селфи</title>
+		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
@@ -11,10 +12,15 @@
 			<div class="logo black"><a href="index.html">DEVICE</a></div>
 			<ul>
 				<li>
-					<a href=""><span></span>Поиск по сайту</a>
+					<a href="">Поиск по сайту</a>
 				</li>
+				<form action="/echo" method="post" action="https://echo.htmlacademy.ru">
+					<label for="search" class="visually-hidden">Search</label> 
+					<input type="search" value="Введенный текст">
+					<button>Найти</button>
+				</form>
 				<li>
-					<span></span>Валентин Петухов
+					Валентин Петухов
 				</li>
 				<li>
 					<a href="">Выйти</a>
@@ -27,7 +33,7 @@
 				</li>
 			</ul>
 			<ul>
-				<li><a href="">Каталог товаров</a><span> +</span>
+				<li><a href="">Каталог товаров</a>
 					<ul>
 						<li><a href="catalog.html">Виртуальная реальность</a></li>
 						<li><a href="catalog.html">Моноподы для селфи</a></li>
@@ -65,29 +71,52 @@
 	
 		<aside class="filter">
 			<h3>Фильтр:</h3>
-			<div class="filter_category">
-				<h4>Стоимость</h4>
-			</div>
-			<div class="filter_category">
-				<h4>Цвет</h4>
-				<ul>
-					<li><span class="checkbox"></span>Черный</li>
-					<li><span class="checkbox"></span>Белый</li>
-					<li><span class="checkbox"></span>Синий</li>
-					<li><span class="checkbox"></span>Красный</li>
-					<li><span class="checkbox"></span>Розовый</li>
-				</ul>
-			</div>
-			<div class="filter_category">
-				<h4>Bluetooth</h4>
-				<ul>
-					<li><span class="checkbox"></span>Есть</li>
-					<li><span class="checkbox"></span>Нет</li>
-				</ul>
-			</div>
-			<button class="show">
-				Показать
-			</button>
+			<form action="/echo" method="post" action="https://echo.htmlacademy.ru">
+			
+				<label for="item_cost">Стоимость</label>
+				<input type="range" min="0" max="5000" id="item-cost" name="item-cost">
+				
+				<fieldset>
+					<legend>Цвет</legend>
+					<ul>
+						<li>
+							<input type="checkbox" name="black" id="black" checked>
+							<label for="black">Черный</label>
+						</li>	
+						<li>
+							<input type="checkbox" name="white" id="white">
+							<label for="white">Белый</label>
+						</li>
+						<li>	
+							<input type="checkbox" name="blue" id="blue" checked>
+							<label for="blue">Синий</label>
+						</li>	
+						<li>	
+							<input type="checkbox" name="red" id="red" checked>
+							<label for="red">Красный</label>
+						</li>
+						<li>	
+							<input type="checkbox" name="pink" id="pink">
+							<label for="pink">Розовый</label>
+						</li>
+					</ul>
+				</fieldset>
+				
+				<fieldset>
+					<legend>Bluetooth</legend>
+					<ul>
+						<li>
+							<input type="radio" name="bluetooth" value="bt-yes" id="bt-yes" checked>
+							<label for="bt-yes">Есть</label>
+						</li>
+						<li>
+							<input type="radio" name="bluetooth" value="bt-no" id="bt-no">
+							<label for="bt-no">Нет</label>
+						</li>	
+					</ul>
+				</fieldset>
+                <button id="catalog-show">Показать</button>
+			</form>
 		</aside>
 		<section class="catalog">
 			<div class="sort">
@@ -98,8 +127,16 @@
 					<li><a href="">По популярности</a></li>
 				</ul>
 				<ul>
-					<li><a href="">По возрастанию</a></li>
-					<li><a href="">По убыванию</a></li>
+					<li>
+						<a href="">
+							<span class="visually-hidden">По возрастанию</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="visually-hidden">По убыванию</span>
+						</a>
+					</li>
 				</ul>
 			</div>
 			<div class="items">
@@ -171,16 +208,16 @@
 			<div>
 				<ul>
 					<li>
-						<span></span>Валентин Петухов
+						Валентин Петухов
 					</li>
 					<li class="white">
 						<a href="#">Выйти</a>
 					</li>
 					<li class="white">
-						<a href="#"><span></span>Сравнить</a>
+						<a href="#">Сравнить</a>
 					</li>
 					<li class="white">
-						<a href="#"><span></span>Корзина</a>
+						<a href="#">Корзина</a>
 					</li>
 				</ul>
 				<p>Тел.: +7 (495) 495-95-95</p>

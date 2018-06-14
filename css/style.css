@@ -15,17 +15,29 @@
 body {
 	margin:0px;
 	padding:0px;
-	font-family: "Open Sans";
+	font-family: "Open Sans", "Arial", serif;
 	}
+.icon{
+	display: inline-block;
+	margin-right:50px;
+	list-style-type: none;
+	height:60px;
+	background: url(../img/user.svg) no-repeat;
+	background-position: 0px 5px;
+	padding-left: 30px;
+}	
+a {
+	text-decoration: none;
+}	
 footer {
 	background: #464646;	
 }	
 h2 {
-	font-family: "Gilroy-ExtraBold";
+	font-family: "Gilroy-ExtraBold", "Arial", serif;
 	font-size: 47px;
 }
 .logo {
-	font-family: "Gilroy-ExtraBold";
+	font-family: "Gilroy-ExtraBold", "Arial", serif;
 	font-size: 48px;
 }
 .goods_item div{
@@ -42,7 +54,7 @@ h2 {
 	border-bottom : 6px solid rgb(240, 197, 46);
 	text-transform : uppercase;
 }
-	
+
 .sticker_new{
 	position: absolute;
 	left: 300px;
@@ -51,6 +63,8 @@ h2 {
 .item-image{
 	position: relative;
 }
+
+/*colors*/	
 .white {
 	color: white;
 }
