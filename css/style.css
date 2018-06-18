@@ -3,6 +3,10 @@
     src: url(../fonts/opensans.woff);
 }
 @font-face {
+    font-family: "Open Sans Light";
+    src: url(../fonts/opensanslight.woff);
+}
+@font-face {
     font-family: "Gilroy-ExtraBold";
     src: url(../fonts/gilroyextrabold.woff);
 	font-weight: 900;
@@ -12,59 +16,334 @@
     src: url(../fonts/gilroylight.woff);
 	font-weight: normal;
 }
+
+/* Глобальные Cтили */
 body {
 	margin:0px;
 	padding:0px;
-	font-family: "Open Sans", "Arial", serif;
 	}
-.icon{
-	display: inline-block;
-	margin-right:50px;
-	list-style-type: none;
-	height:60px;
-	background: url(../img/user.svg) no-repeat;
-	background-position: 0px 5px;
-	padding-left: 30px;
-}	
+ul {
+	margin:0;
+    padding:0;
+    list-style:none;	
+}		
 a {
 	text-decoration: none;
-}	
-footer {
-	background: #464646;	
-}	
+	color: black;
+}
+p {
+	font-family: "Open Sans Light", "Arial", serif;
+	font-size: 15px;
+	line-height: 30px;
+}
 h2 {
 	font-family: "Gilroy-ExtraBold", "Arial", serif;
 	font-size: 47px;
+	line-height: 48px;
+	margin:0;
+	letter-spacing: 0.01em;
 }
-.logo {
+h3 {
+	font-family: "Gilroy-ExtraBold", "Arial", serif;
+	font-size: 16px;
+	line-height: 24px;
+	text-transform : uppercase;
+	letter-spacing: 0.2em;
+	margin: 0;
+}
+button{
+	border:0;
+}
+.simple-name {	
+	font-family: "Gilroy-ExtraBold", "Arial", serif;
+	font-size: 18px;
+	line-height: 24px;
+}	
+
+.wrapper {
+	width: 1200px;
+	margin: 0px auto;
+	display: flex;
+}
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+/* Cтили для хедера*/
+.main-header {
+	width: 100%;
+	background-color: rgb(247, 226, 150);
+	margin-top: 40px;
+	margin-left: 20px;
+	margin-right: 20px;
+	padding-left:60px;
+}
+.logo-header{
+	position: relative;
+	top: -25px;
 	font-family: "Gilroy-ExtraBold", "Arial", serif;
 	font-size: 48px;
+	text-transform : uppercase;
 }
-.goods_item div{
+.logo-header a:hover {
+	opacity: 0.6;
+}
+.logo-header a:active {
+	opacity: 0.3;
+}
+.menu-user {
+	display: flex;
+	justify-content: space-between;
+	font-family: "Open Sans Light", "Arial", serif;
+	font-size: 15px;
+	line-height: 36px;
+	letter-spacing: 0.01em;
+}
+.menu-user a:hover{
+	opacity: 0.6;
+}
+.menu-user a:active{
+	opacity: 0.3;
+}
+
+.menu-user .link-invert{
+	opacity: 0.3;
+}
+.menu-user .link-invert:hover{
+	opacity: 0.6;
+}
+
+
+.icon {
+	margin-right:50px;
+	background: url(../img/user.svg) no-repeat;
+	background-position: 0px 0px;
+	padding-left: 30px;
+}
+.main-menu{
+	display: flex;
+	justify-content: space-between;
+}
+.catalog-popup{
+	font-family: "Open Sans Light", "Arial", serif;
+	font-size: 15px;
+	line-height: 36px;
+	letter-spacing: 0.01em;
+}
+.catalog-popup a:hover{
+	opacity: 0.6;
+}
+.catalog-popup a:active{
+	opacity: 0.3;
+}
+
+/* Cтили для слайдера*/
+
+.slider{
+	width: 1200px;
+	margin: 0px auto;
+	display: flex;
+}
+.slide{
+	display: flex;
+}
+
+.slide-number {
+	font-family: "Gilroy-ExtraBold", "Arial", serif;
+	font-size: 179px;
+	text-transform: uppercase;
+	line-height: 179px;
+	text-align: right;
+}
+
+.slide-advantage {
+	font-family: "Gilroy-Light", "Arial", serif;
+	font-size: 36px;
+	line-height: 48px;
+	text-align: left;
+	letter-spacing: 0.01em;
+}
+.advantage-explanation {
+	font-family: "Open Sans Light", "Arial", serif;
+	font-size: 13px;
+	line-height: 20px;
+	text-align: left;
+	letter-spacing: 0.01em;
+}
+.slider-radiogroup{
+	display:flex;
+}
+
+/* Cтили для блока категорий товаров*/
+.goods div:first-child {
+	display: flex;
+    justify-content: space-around;
+}
+.goods a {
+	width: 160px;
+	
+}
+.goods h4 {
+	margin-top: 35px;
+}
+.goods_item {
 	width: 160px;
 	height: 160px;
 	background-color: rgba(240, 197, 46, 0.5);	
 }
-.link_striked {
+
+/* Cтили для блока сервиса*/
+.services{
+	background-color: #e5e5e5;
+	display: flex;
+	flex-direction: row;
+	}
+.service{
+	margin-left: 100px;
+}
+.services-list{
+	width: 280px;
+}
+.services-list a{
+	font-family: "Gilroy-ExtraBold";
+	font-size: 18px;
+	line-height: 40px;
+	letter-spacing: 0.2em;
+	text-transform : uppercase;
+	display: block;
+	width: 160px;
+	height:40px;
+	margin-bottom: 23px;
+	text-align: center;
+	background-image: linear-gradient(
+        to bottom,
+        transparent 16px,
+		rgb(240, 197, 46) 16px,
+		rgb(240, 197, 46) 24px,
+        transparent 24px
+    );
+}	
+
+.services-list a:hover{
+	background-color: rgb(240, 197, 46);
+	color: black;
+}
+
+.services-list a:active{
+	background-image: none;
+	background-color: black;
+	color: #f7e184;
+}
+
+/* Cтили для блока клиентов*/
+.clients-box{
+	width: 1200px;
+	margin: 94px auto;
+}
+.clients{
+	display: flex;
+	flex-direction: row;
+    justify-content: space-around;
+	margin: 0px;
+	padding: 0px;
+}	
+/* Cтили для инфо о компании*/
+
+.info-item {
+	padding: 0px 20px;
+	width:50%;
+	box-sizing: padding-box;
+}
+.info-item h2{
+	margin: 40px 0px;
+	}
+.info-item h2::before{
+	content:"";
+	width:80px;
+	height:6px;
+	background-color:black;
+	display: block;
+	position: relative;
+	top: -40px;
+}
+.transport-list{
+	font-family: "Gilroy-ExtraBold", "Arial", serif;
+	font-size: 16px;
+	line-height: 40px;
+}
+
+/* стили для футера*/	
+.main-footer {
+	background: #464646;
+	color: white;
+}
+.main-footer div:first-child {
+	display: flex;
+}
+.logo-footer {
+	font-family: "Gilroy-ExtraBold", "Arial", serif;
+	font-size: 48px;
+	color: rgb(240, 197, 46);
+}
+.logo-footer a:hover {
+	opacity: 0.6;
+}
+.logo-footer a:active {
+	opacity: 0.3;
+}
+
+/* стили для ссылок*/
+.link-striked {
+	font-family: "Gilroy-ExtraBold";
+	font-size: 18px;
+	line-height: 40px;
+	letter-spacing: 0.2em;
+	text-transform : uppercase;
+	display: block;
+	width:220px;
+	height:40px;
+	text-align:center;
+	background-image: linear-gradient(
+        to bottom,
+        transparent 16px,
+		rgb(240, 197, 46) 16px,
+		rgb(240, 197, 46) 24px,
+        transparent 24px
+    );
+}
+.link-striked:hover {
+	background-color: rgb(240, 197, 46);
+	background-image: none;
+}
+
+.link-striked:active {
+	color: rgba(0, 0, 0, 0.3);
+	background-image: none;
+	background-color: rgb(240, 197, 46);
+}
+
+.link-nonstriked {
 	font-family: "Gilroy-ExtraBold";
 	font-size: 18px;
 	line-height: 24px;
-	text-decoration: none;
-	color: black;
-	border-bottom : 6px solid rgb(240, 197, 46);
+	letter-spacing: 0.2em;
 	text-transform : uppercase;
 }
-
-.sticker_new{
-	position: absolute;
-	left: 300px;
-	top: 20px;
+.link-nonstriked:hover{
+	opacity: 0.6;
 }
-.item-image{
-	position: relative;
+.link-nonstriked:active{
+	opacity: 0.3;
 }
 
-/*colors*/	
+/* цвета */	
 .white {
 	color: white;
 }
@@ -72,8 +351,160 @@ h2 {
 	color: rgb(240, 197, 46);
 }
 .yellow_half {
+	color: rgb(247, 226, 150);
+}
+
+.yellow_half2 {
 	color: rgba(240, 197, 46, 0.5);
 }
 .black {
 	color: black;
+}
+
+/* стили для каталога*/
+
+/* стили для заголовка каталога*/
+.catalog-header {
+	height: 180px;
+	margin-left: 20px;
+	padding-left:60px;
+	display: flex;
+	flex-direction: column;
+}
+.catalog-header h2{
+	margin-top: 38px;
+	margin-bottom: 20px;
+}
+
+.breadcrumbs {
+	font-family: "Open Sans Light";
+	font-size: 14px;
+	line-height: 24px;
+	letter-spacing: 0.01em;
+	display:flex;
+}
+.breadcrumbs li:last-child {
+	opacity: 0.3;
+}
+.breadcrumbs a {
+	opacity: 0.3;
+	margin-right: 40px;
+}
+.breadcrumbs a:hover {
+	opacity: 0.6;
+}
+.breadcrumbs a:active {
+	opacity: 0.1;
+}
+
+/* стили для фильтра */
+aside{
+	background-color: #efefef;
+	
+}
+.otbivka{
+	height: 70px;
+	background-color: rgba(0, 0, 0, 0.08);
+	display: flex;
+}
+
+fieldset{
+	border: 0;
+}
+.filter-value {
+	font-family: "Open Sans Light";
+	font-size: 14px;
+	line-height: 40px;
+	letter-spacing: 0.01em;
+}
+
+
+/* стили для товаров*/
+.catalog-sorting {
+	font-family: "Open Sans";
+	font-size: 14px;
+	line-height: 18px;
+}
+.otbivka ul {
+	display:flex;
+}
+.otbivka a:hover {
+	opacity: 0.6;
+}
+.otbivka a:active {
+	opacity: 0.3;
+}
+figcaption {
+	display:flex;
+	justify-content: space-between;
+}
+.item-name {
+	width: 260px;
+}
+.item-cost {
+	font-family: "Gilroy-Light";
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0.01em;
+}
+.item-image {
+	position: relative;
+}
+.sticker-new {
+	font-family: "Gilroy-ExtraBold", "Arial", serif;
+	font-size: 14px;
+	line-height: 56px;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	text-align: center;
+	color: rgba(0, 0, 0, 0.2);
+	position: absolute;
+	right: 30px;
+	bottom: 300px;
+	height: 56px;
+	width: 56px;
+	border: 2px solid rgba(0, 0, 0, 0.2);
+	border-radius: 56px;
+	
+}
+/* стили для паджинатора*/
+.pagination{
+	width: 100%;
+	height:70px;
+	background-color: rgba(0, 0, 0, 0.08);
+	margin-bottom: 77px;
+	
+}
+.pagination {
+	display:flex;
+	justify-content: space-between;
+}
+.pagination-text {
+	display: block;
+	height: 100%;
+	font-family: "Gilroy-ExtraBold", "Arial", serif;
+	font-size: 16px;
+	line-height: 70px;
+	text-transform : uppercase;
+	letter-spacing: 0.2em;
+	margin: 0;
+	vertical-align: center;
+}
+.pagination li:first-child { 
+	width: 126px;
+	margin-right: 100px;
+	text-align: center;
+}
+.pagination li:last-child { 
+	width: 126px;
+	margin-left: 100px;
+	text-align: center;
+}
+
+.pagination .move-pages:hover { 
+	background-color: #d9d9d9;
+}
+.pagination .move-pages:active { 
+	background-color: #d9d9d9;
+	opacity: 0.3;
 }

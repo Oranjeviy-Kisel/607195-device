@@ -7,31 +7,26 @@
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
-  
-		<header>
-			<div class="logo black"><a href="index.html">DEVICE</a></div>
-			<ul>
-				<li>
-					<a href="">Поиск по сайту</a>
-				</li>
-				<form action="/echo" method="post" action="https://echo.htmlacademy.ru">
-					<label for="search" class="visually-hidden">Search</label> 
-					<input type="search" value="Введенный текст">
-					<button>Найти</button>
-				</form>	
-				<li>
-					<a class="enter" href="">Войти</a>
-				</li>
-				<li>
-					<a class="compare" href="">Сравнить</a>
-				</li>
-				<li>
-					<a class="bucket" href="">Корзина</a>
-				</li>
-			</ul>
-			<ul>
-				<li><a href="">Каталог товаров</a>
-					<ul>
+		<div class="wrapper">
+			<header class="main-header">
+				<div class="logo logo-header">Device</div>
+				<ul class="menu-user">
+					<li>
+						<a class="link-invert" href="">Поиск по сайту</a>
+					</li>
+					<li>
+						<a class="icon enter" href="">Войти</a>
+					</li>
+					<li>
+						<a class="icon compare" href="">Сравнить</a>
+					</li>
+					<li>
+						<a class="icon bucket" href="">Корзина</a>
+					</li>
+				</ul>
+				<ul class="main-menu">
+					<li><a class="link-nonstriked" href="">Каталог товаров</a>
+					<ul class="catalog-popup">
 						<li><a href="catalog.html">Виртуальная реальность</a></li>
 						<li><a href="catalog.html">Моноподы для селфи</a></li>
 						<li><a href="catalog.html">Экшн-камеры</a></li>
@@ -40,31 +35,33 @@
 						<li><a href="catalog.html">Квадрокоптеры</a></li>
 					</ul>
 				</li>
-				<li>
-					<a href="">Доставка</a>
-				</li>
-				<li>
-					<a href="">Гарантия</a>
-				</li>
-				<li>
-					<a href="">Контакты</a>
-				</li>
-			</ul>
-		</header>
+					<li>
+						<a class="link-nonstriked" href="">Доставка</a>
+					</li>
+					<li>
+						<a class="link-nonstriked" href="">Гарантия</a>
+					</li>
+					<li>
+						<a class="link-nonstriked" href="">Контакты</a>
+					</li>
+				</ul>
+				<form action="/echo" method="post" action="https://echo.htmlacademy.ru">
+						<label for="search" class="visually-hidden">Search</label> 
+						<input type="search" value="Введенный текст">
+						<button>Найти</button>
+				</form>	
+			</header>
+		</div>
 	
 		<section class="slider">
-	
+		
 			<!-- Первый слайд -->
 			<div class="slide">
 				<div class="slide-image">
 					<img src="img/slider-1.png">
 				</div>
-				<div class="slide-number">
-					<span>
-						01
-					</span>
-				</div>
 				<div class="slide-content">	
+					<div class="slide-number">01</div>
 					<h2>
 						Делай селфи,<br>
 						как Бен Стиллер! 
@@ -73,33 +70,29 @@
 						Самая длинная палка для селфи доступна в нашем магазине.
 						Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
 					</p>
-					<a href="#">Подробнее</a>
+					<a class="link-striked" href="">Подробнее</a>
 					<table>
 						<tr>
-							<td>8,5 м</td>
-							<td>5 кг</td>
-							<td>Карбон</td>
+							<td class="slide-advantage">8,5 м</td>
+							<td class="slide-advantage">5 кг</td>
+							<td class="slide-advantage">Карбон</td>
 						</tr>
 						<tr>
-							<td>Длина палки</td>
-							<td>Вес палки</td>
-							<td>Материал</td>
+							<td class="advantage-explanation">Длина палки</td>
+							<td class="advantage-explanation">Вес палки</td>
+							<td class="advantage-explanation">Материал</td>
 						</tr>
 					</table>
 				</div>	
 			</div>
 		
 			<!-- Второй слайд -->
-			<div class="slide">
+			<div class="slide visually-hidden">
 				<div class="slide-image">
 					<img src="img/slider-2.png">
 				</div>
-				<div class="slide-number">
-					<span>
-						02
-					</span>
-				</div>
 				<div class="slide-content">	
+					<div class="slide-number">02</div>
 					<h2>
 						Худеем<br>
 						правильно!
@@ -109,21 +102,21 @@
 						не пропускать занятия и соблюдать диету.
 					</p>
 					<p>
-						<a href="#">Подробнее</a>
+						<a class="link-striked" href="">Подробнее</a>
 					</p>
 					<table>
 						<tr>
-							<td>48 часов</td>
+							<td class="slide-advantage">48 часов</td>
 						</tr>
 						<tr>
-							<td>Без подзарядки</td>
+							<td class="advantage-explanation">Без подзарядки</td>
 						</tr>
 					</table>
 				</div>	
 			</div>
 		
 			<!-- Третий слайд -->
-			<div class="slide">
+			<div class="slide visually-hidden">
 				<div class="slide-image">
 					<img src="img/slider-3.png">
 				</div>
@@ -142,113 +135,120 @@
 						мощным лазером, замаскированным под стандартную камеру.
 					</p>
 					<p>
-						<a href="#">Подробнее</a>
+						<a class="link-striked" href="">Подробнее</a>
 					</p>
 					<table>
 						<tr>
-							<td>800 м</td>
-							<td>50 м</td>
+							<td class="slide-advantage">800 м</td>
+							<td class="slide-advantage">50 м</td>
 						</tr>
 						<tr>
-							<td>Дальность полета</td>
-							<td>Радиус поражения</td>
+							<td class="advantage-explanation">Дальность полета</td>
+							<td class="advantage-explanation">Радиус поражения</td>
 						</tr>
 					</table>
 				</div>
 			</div>
-			<div class="radio_block"> 
-				<i class="radio radio-unchecked"></i>
-				<i class="radio radio-unchecked"></i>
-				<i class="radio radio-checked"></i>
-			</div>
+			<form action="/echo" method="post" action="https://echo.htmlacademy.ru">
+				<ul class="slider-radiogroup">
+					<li>
+						<input type="radio" name="slide" checked>
+					</li>
+					<li>
+						<input type="radio" name="slide">
+					</li>
+					<li>
+						<input type="radio" name="slide">
+					</li>					
+				</ul>
+			</form>
 		</section>
 	
 		<section class="goods">
-			<a href="#">
-				<div class="goods-item">
-					<p>Виртуальная реальность</p>
-				</div>
-			</a>	
-			<a href="#">
-				<div class="goods-item">
-					<p>Моноподы для селфи</p>
-				</div>
-			</a>
-			<a href="#">
-				<div class="goods-item">
-					<p>Экшн-камеры</p>
-				</div>
-			</a>
-			<a href="#">
-				<div class="goods_item">
-					<p>Фитнес-браслеты</p>
-				</div>
-			</a>	
-			<a href="#">
-				<div class="goods-item">
-					<p>Умные часы</p>
-				</div>
-			</a>	
-			<a href="#">
-				<div class="goods-item">
-					<p>Квадрокоптеры</p>
-				</div>
-			</a>
+			<div class="wrapper">
+					<a href="">
+						<div class="goods_item"></div>
+						<h4 class="simple-name">Виртуальная реальность</h4>
+					</a>
+					<a href="">
+						<div class="goods_item"></div>
+						<h4 class="simple-name">Моноподы для селфи</h4>
+					</a>
+
+					<a href="">
+						<div class="goods_item"></div>
+						<h4 class="simple-name">Экшн-камеры</h4>
+					</a>
+					<a href="">
+						<div class="goods_item"></div>
+						<h4 class="simple-name">Фитнес-браслеты</h4>
+					</a>
+					<a href="">
+						<div class="goods_item"></div>
+						<h4 class="simple-name">Умные часы</h4>
+					</a>	
+					<a href="">
+						<div class="goods_item"></div>
+						<h4 class="simple-name">Квадрокоптеры</h4>
+					</a>
+			</div>
 		</section>
 	
-		<section class="delivery">
-			<ul>
-				<li>
-					<a href="#">Доставка</a>
-				</li>
-				<li>
-					<a href="#">Гарантия</a>
-				</li>
-				<li>
-					<a href="#">Кредит</a>
-				</li>
-			</ul>
-			<div>
-				<h2>Доставка</h2>
-				<p>
-					Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
-					Ведь мы неплохо заработаем, поднимая его на ваш этаж.
-				</p>
-			</div>
-			<div>
-				<h2>Гарантия</h2>
-				<p>
-					Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>
-					Товар, не дом, конечно же.
-				</p>
-			</div>
-			<div>
-				<h2>Кредит</h2>
-				<p>
-					Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется
-				</p>
-			</div>	
+		<section class="services">
+			<div class="wrapper">
+				<ul class="services-list">
+					<li>
+						<a href="">Доставка</a>
+					</li>
+					<li>
+						<a href="">Гарантия</a>
+					</li>
+					<li>
+						<a href="">Кредит</a>
+					</li>
+				</ul>
+				<div class="service delivery">
+					<h2>Доставка</h2>
+					<p>
+						Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
+						Ведь мы неплохо заработаем, поднимая его на ваш этаж.
+					</p>
+				</div>
+				<div class="service guarantee visually-hidden">
+					<h2>Гарантия</h2>
+					<p>
+						Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>
+						Товар, не дом, конечно же.
+					</p>
+				</div>
+				<div class="service credit visually-hidden">
+					<h2>Кредит</h2>
+					<p>
+						Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется
+					</p>
+				</div>
+			</div>		
 		</section>
 	
-		<section class="clients">
-			<ul>
+		<section class="clients-box">
+			<ul class="clients">
 				<li class="client-logo">
-					<a href="#">
+					<a href="">
 						<img src="img/logo-1.jpg">
 					</a>	
 				</li>
 				<li class="client-logo">
-					<a href="#">
+					<a href="">
 						<img src="img/logo-2.jpg">
 					</a>
 				</li>
 				<li class="client-logo">
-					<a href="#">
+					<a href="">
 						<img src="img/logo-3.jpg">
 					</a>	
 				</li>
 				<li class="client-logo">
-					<a href="#">
+					<a href="">
 						<img src="img/logo-4.jpg">
 					</a>	
 				</li>
@@ -256,29 +256,85 @@
 		</section>
 	
 		<section class="info">
-		<div class="about">
-			<h2>О нас</h2>
-			<p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-			<p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
-			<ul>
-				<li>Деловые Линии</li>
-				<li>Автотрейдинг</li>
-				<li>ЖелДорЭкспедиция</li>
-			</ul>
-			<p>
-				<a href="#">Подробнее о нас</a>
-			</p>
-		</div>
-		<div class="contacts">
-			<h2>Контакты</h2>
-			<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-			<a href="#">
-				<img src="img/map.jpg">
-			</a>	
-			<p>
-				<a href="#">Напишите нам</a>
-			</p>
-		</div>
+			<div class="wrapper">
+				<div class="info-item">
+					<h2><span>О нас</span></h2>
+					<p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+					<p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+					<ul>
+						<li class="transport-list">Деловые Линии</li>
+						<li class="transport-list">Автотрейдинг</li>
+						<li class="transport-list">ЖелДорЭкспедиция</li>
+					</ul>
+					<p>
+						<a class="link-striked" href="">Подробнее о нас</a>
+					</p>
+				</div>
+				<div class="info-item">
+					<h2>Контакты</h2>
+					<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+					<a href="">
+						<img src="img/map.jpg">
+					</a>	
+					<p>
+						<a class="link-striked" href="">Напишите нам</a>
+					</p>
+				</div>
+			</div>
+		</section>
+	
+		<footer class="main-footer">
+			<div class="wrapper">
+				<div>
+					<div class="logo-footer">DEVICE</div>
+					<p>г. Москва, ул. Строителей, 15</p>
+				</div>
+				<div>
+					<ul class="main-menu">
+						<li><a class="link-nonstriked white" href="">Доставка</a></li>
+						<li><a class="link-nonstriked white" href="">Гарантия</a></li>
+						<li><a class="link-nonstriked white" href="">Контакты</a></li>
+					</ul>
+					<ul>
+						<li>
+							<a href="">
+								<span class="visually-hidden">Фейсбук</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<span class="visually-hidden">Инстаграм</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<span class="visually-hidden">Твиттер</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+				<ul class="menu-user">
+					<li class="icon enter">
+						<a class="white" href="">Войти</a>
+					</li>
+					<li class="icon compare">
+						<a class="white" href="">Сравнить</a>
+					</li>
+					<li class="icon  ">
+						<a class="white" href="">Корзина</a>
+					</li>
+				</ul>
+				<p>Тел.: +7 (495) 495-95-95</p>
+				<div class="academy_logo">
+					<a href="https://htmlacademy.ru/intensive/htmlcss">
+						<img src="img/logo-html.svg">
+					</a>
+				</div>
+			</div>
+			</div>		
+		</footer>
+		
 		<div>
 			<form action="/echo" method="post">
 				<label for="message-username">Ваше имя</label>
@@ -290,62 +346,8 @@
 				<label for="message-text">Текст письма</label>
 				<textarea rows="5" cols="100" name="message-text" id="message-text" required>В свободной форме
 				</textarea>
-			
 			</form>
 		</div>
-		
-	</section>
-	
-		<footer>
-			<div>
-				<div class="logo yellow">DEVICE</div>
-				<p>г. Москва, ул. Строителей, 15</p>
-				<div></div>
-			</div>
-			<div>
-				<ul>
-					<li><a href="#">Доставка</a></li>
-					<li><a href="#">Гарантия</a></li>
-					<li><a href="#">Контакты</a></li>
-				</ul>
-				<ul>
-					<li>
-						<a href="#">
-							<span class="visually-hidden">Фейсбук</span>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<span class="visually-hidden">Инстаграм</span>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<span class="visually-hidden">Твиттер</span>
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div>
-				<ul class="menu-user">
-					<li class="icon bucket">
-						<a class="white" href="">Войти</a>
-					</li>
-					<li class="icon bucket">
-						<a class="white" href="">Сравнить</a>
-					</li>
-					<li class="icon bucket">
-						<a class="white" href="">Корзина</a>
-					</li>
-				</ul>
-				<p>Тел.: +7 (495) 495-95-95</p>
-				<div class="academy_logo">
-					<a href="https://htmlacademy.ru/intensive/htmlcss">
-						<img src="img/logo-html.svg">
-					</a>
-				</div>
-			</div>	
-		</footer>
-	
+
 	</body>
 </html>
