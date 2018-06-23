@@ -1,7 +1,7 @@
 @font-face {
     font-family: "Open Sans";
     src: url(../fonts/opensans.woff);
-	font-weight: normal;
+	font-weight: 500;
 }
 @font-face {
     font-family: "Open Sans";
@@ -274,22 +274,17 @@ a {
 	padding: 0 0 180px 0;
 	list-style: none;
 }
-.product-category {
-	width: 160px;
-	background-image: linear-gradient(
-        to bottom,
-        rgba(240, 197, 46, 0.5) 160px,
-		transparent 160px
-	);
-}
 .category-image {
 	width: 160px;
-	height: 160px;	
-	background:
-	url(../img/popular-1.svg) no-repeat;
-	background-position: center;
-	
-}
+	height: 160px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+ }
+.product-category:nth-child(2) svg{
+	align-self: flex-end;
+} 
 .category-name {
 	margin: 0px;
 	margin-top: 35px;
@@ -297,21 +292,39 @@ a {
 	font-weight: 900;
 	font-size: 18px;
 	line-height: 24px;
-	color: black;
 }
-
-.product-category a {
+.product-category a{
+	width: 160px;
+	/* height: 160px; */
 	display: block;
+	color: black;
+	background-image: linear-gradient(
+        to bottom,
+        rgba(240, 197, 46, 0.5) 160px,
+		transparent 160px
+	);
 }
-.product-category:hover {
-		background-image: linear-gradient(
+.product-category a:hover {
+	color: black;
+	background-image: linear-gradient(
+		to bottom,
+		rgba(240, 197, 46, 1) 160px,
+		transparent 160px
+    );
+}
+.product-category a:active {
+	color: rgba(0, 0, 0, 0.3);
+	background-image: linear-gradient(
         to bottom,
         rgba(240, 197, 46, 1) 160px,
 		transparent 160px
     );
 }
-.product-category a:active {
-	opacity: 0.3;
+
+.category-item:active path, 
+.category-item:active ellipse,
+.category-item:active circle {
+	fill: rgba(0, 0, 0, 0.1);
 }
 
 /* Cтили для блока сервиса*/
@@ -463,7 +476,6 @@ a {
 	font-weight: 900;
 	font-size: 48px;
 }
-
 .logo-footer a {
 	color: rgb(240, 197, 46);
 }
@@ -497,8 +509,6 @@ a {
 .footer-main-menu a:active {
 	color: rgba(255, 255, 255, 0.3);
 }
-
-
 .footer-user-menu {
 	list-style:none;
 	display: flex;
@@ -621,6 +631,82 @@ a {
 	background-color: rgb(240, 197, 46);
 }
 
+/* cтили для модального окна */	
+.modal {
+	position: fixed;
+	color: black;
+	background-color: #fee;
+	z-index: 100;
+	box-shadow: 0 10px 20px rgba(4, 6, 6, 0.2);
+}
+
+.modal-sendus {
+	width: 960px;
+	padding: 96px 100px 80px 100px; 
+	left: 50%;
+	top: 30%;
+	margin-left: -480px;
+}
+
+.modal-close {
+	box-sizing: border-box;
+	position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  font-size: 0;
+  background-color: rgba(240, 197, 46, 0.5);
+  border: 0;
+  border-radius: 55px;
+  cursor: pointer;
+}
+.modal-close::before,
+.modal-close::after {
+	content: "";
+	width: 32px;
+	height: 2px;
+	position: absolute;
+	right:11px;
+	bottom:27px;
+	background-color: white;
+}
+
+.modal-close::before {
+	transform: rotate(45deg);
+}
+
+.modal-close::after {
+	transform: rotate(-45deg);
+}
+
+.modal-close:hover,
+.modal-close:focus {
+	background-color: rgba(240, 197, 46, 1);
+}
+.modal-close:active {
+	background-color: rgba(240, 197, 46, 0.3);
+}
+.send-form {
+	display:flex;
+	flex-direction: column;
+}
+
+.send-form p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.send-form input[type="text"],
+.send-form input[type="password"] {
+  font: inherit;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+
+
+
 /* цвета */	
 .white {
 	color: white;
@@ -661,7 +747,8 @@ a {
 
 .breadcrumbs {
 	list-style: none;
-	font-family: "Open Sans Light";
+	font-family: "Open Sans";
+	font-weight: 300;
 	font-size: 14px;
 	line-height: 24px;
 	letter-spacing: 0.01em;
@@ -681,19 +768,31 @@ a {
 	color: rgba(0, 0, 0, 0.1);
 }
 
-.goods {
-	display: flex;
-	background: #efefef; 
+/* Стили для секции с товарами*/
+.goods-section {
+	margin-bottom:10px;
+	background-image: 
+	linear-gradient(
+        to bottom,
+		rgba(0, 0, 0, 0.08) 70px,
+        transparent 70px
+    ),
+	linear-gradient(
+        to right,
+		#eeeeee 659px,
+        transparent 659px
+    );
 }
-.catalog{
+.goods-wrapper {
+	width: 1160px;
+	margin: 0px auto;
 	display: flex;
-	flex-direction: column;
-	margin-left: 72px;
+	position: relative;
 }
 .column-header{
 	display: flex;
-	background-color: rgba(0, 0, 0, 0.08);
 	margin-bottom: 40px;
+	min-height: 70px;
 }
 .column-header h3{
 	font-family: "Gilroy", "Arial", serif;
@@ -702,18 +801,31 @@ a {
 	line-height: 24px;
 	text-transform : uppercase;
 	letter-spacing: 0.2em;
-	margin:0;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	margin: 0;
+	padding-top: 22px;
+	padding-bottom: 24px;
+
 }
 .column-header ul{
-	list-style: none;
 	display: flex;
-	justify-content: space-between;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	align-items: baseline;
+	align-self: baseline;
 }
+
 .column-header a{
-	color: rgba(0, 0, 0, 0.3)
+	color: rgba(0, 0, 0, 0.3);
 }
+
+.catalog-sorting {
+	font-family: "Open Sans";
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 18px;
+}
+
 .column-header a:hover,
 .column-header a:focus {
 	color: rgba(0, 0, 0, 0.6);
@@ -723,9 +835,8 @@ a {
 }
 /* стили для фильтра*/
 .filter {
-	width: 420px;
-	padding-left: 80px;
-	background-color: #eeeeee; 
+	width: 268px;
+	padding-left: 60px;
 }
 .filter fieldset {
 	border: 0;
@@ -749,7 +860,6 @@ a {
 	letter-spacing: 0.01em;
 	color: black;
 }
-
 .filter-category:before {
 	content: "";
 	width: 200px;
@@ -759,13 +869,6 @@ a {
 	margin: 0;
 	margin-bottom: 10px;
 }
-
-.catalog-sorting {
-	font-family: "Open Sans";
-	font-size: 14px;
-	line-height: 18px;
-}
-
 .filter-show {
 	border: 0;
 	font-family: "Gilroy", "Arial", serif;
@@ -799,6 +902,11 @@ a {
 }
 
 /* стили для товаров*/
+.catalog{
+	display: flex;
+	flex-direction: column;
+	margin-left: 72px;
+}
 .product-cards{
 	list-style: none;
 	margin:0;
@@ -826,7 +934,6 @@ a {
 .card-name a{
 	color: black;
 }
-
 .card-cost {
 	font-family: "Gilroy";
 	font-weight:300;
@@ -834,7 +941,6 @@ a {
 	line-height: 24px;
 	letter-spacing: 0.01em;
 }
-
 .sticker-new {
 	font-family: "Gilroy", "Arial", serif;
 	font-weight: 900;
@@ -875,7 +981,6 @@ a {
 	padding: 25px 10px;
 	vertical-align: middle;
 }
-
 .pagination .move-pages {
 	width: 126px;
 	text-align: center;
