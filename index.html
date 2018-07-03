@@ -9,15 +9,13 @@
 	<body>
 		<div class="container flex-horizontal">
 			<header class="main-header">
+				<div class="logo-header">Device</div>
 				<nav class="user-navigation">
-					<div class="logo-header">Device</div>
 					<form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-						<label for="search">
-								<a href="">Поиск по сайту</a>
+						<label class="visually-hidden" for="search-value">
+							Поиск по сайту
 						</label> 
-						<span class="search-field">
-							<input type="search" id="search" placeholder="Введенный текст"><button class="search-button" type="submit">Найти</button>
-						</span>
+						<input class="search-field" name="search" type="text" id="search-value" value="Поиск по сайту" autocomplete="off"><button class="search-button" type="submit">Найти</button>
 					</form>
 					<ul class="user-navigation-menu">
 						<li class="left-align">
@@ -43,7 +41,7 @@
 				<ul class="main-menu-header">
 					<li class="main-menu-item catalog-menu-item">
 						<a class="catalog-menu-link" href="catalog.html">Каталог товаров</a>
-						<div class="catalog-menu-popup visually-hidden">
+						<div class="catalog-menu-popup">
 							<ul class="catalog-list">
 								<li><a href="catalog.html">Виртуальная реальность</a></li>
 								<li><a href="catalog.html">Моноподы для селфи</a></li>
@@ -82,7 +80,7 @@
 			<section class="slider">
 				<div class="slides">
 					<!-- Первый слайд -->
-					<div class="slide visually-hidden">
+					<div class="slide">
 						<div class="slide-image">
 							<img src="img/slider-1.png" width="600" height="500" alt="monopod">
 						</div>
@@ -114,7 +112,7 @@
 				
 		
 					<!-- Второй слайд -->
-					<div class="slide">
+					<div class="slide visually-hidden">
 						<div class="slide-image">
 							<img src="img/slider-2.png" width="600" height="500" alt="fitness-braclete">
 						</div>
@@ -170,17 +168,25 @@
 						</div>	
 					</div>
 				</div>		
-				<ul class="slider-radiogroup">
-					<li>
-						<input type="radio" name="slide" checked>
-					</li>
-					<li>
-						<input type="radio" name="slide">
-					</li>
-					<li>
-						<input type="radio" name="slide">
-					</li>					
-				</ul>
+			
+					<ul class="slider-radiogroup">
+						<li>
+							<label class="slider-indicator">
+								<input type="radio" name="slider-radio" class="" checked>
+							</label>
+						</li>
+						<li>
+							<label class="slider-indicator">
+								<input type="radio" name="slider-radio" class="">
+							</label>	
+						</li>
+						<li>
+							<label class="slider-indicator">
+								<input type="radio" name="slider-radio" class="">
+							</label>
+						</li>					
+					</ul>
+				
 			</section>
 		</div>
 	
@@ -316,19 +322,19 @@
 		<section class="services">
 			<div class="container flex-horizontal">
 				<ul class="services-list">
-					<li class="services-list-item item-active">
-						Доставка
+					<li>
+						<a href="">Доставка</a>
 					</li>
-					<li class="services-list-item">
-						<a href="">Гарантия</a>
+					<li class="list-item-active">
+						<a>Гарантия</a>
 					</li>
-					<li class="services-list-item">
+					<li>
 						<a href="">Кредит</a>
 					</li>
 				</ul>
 				
 				<div class="services-slides">
-					<div class="services-slide services-delivery">
+					<div class="services-slide services-delivery visually-hidden">
 						<h2 class="service-header">Доставка</h2>
 						<p class="service-description">
 						Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
@@ -336,7 +342,7 @@
 						</p>
 					</div>
 				
-					<div class="services-slide services-warranty visually-hidden">
+					<div class="services-slide services-warranty">
 						<h2 class="service-header">Гарантия</h2>
 						<p class="service-description">
 							Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>
@@ -355,24 +361,24 @@
 	
 		<section class="clients-box">
 			<ul class="clients">
-				<li class="client-logo">
-					<a href="">
-						<img src="img/logo-1.jpg" alt="logo-1" width="260" height="100">
+				<li class="client-logo-sandwich">
+					<a class="client-logo" href="http://www.client.ru">
+						<img src="img/logo-1-grey.jpg" alt="logo-1" width="260" height="100">
 					</a>	
 				</li>
-				<li class="client-logo">
-					<a href="">
-						<img src="img/logo-2.jpg" alt="logo-1" width="260" height="100">
+				<li class="client-logo-sandwich">
+					<a class="client-logo" href="">
+						<img src="img/logo-2-grey.jpg" alt="logo-1" width="260" height="100">
 					</a>
 				</li>
-				<li class="client-logo">
-					<a href="">
-						<img src="img/logo-3.jpg" alt="logo-1" width="260" height="100">
+				<li class="client-logo-sandwich">
+					<a class="client-logo" href="">
+						<img src="img/logo-3-grey.jpg" alt="logo-1" width="260" height="100">
 					</a>	
 				</li>
-				<li class="client-logo">
-					<a href="">
-						<img src="img/logo-4.jpg" alt="logo-1" width="260" height="100">
+				<li class="client-logo-sandwich">
+					<a class="client-logo" href="">
+						<img src="img/logo-4-grey.jpg" alt="logo-1" width="260" height="100">
 					</a>	
 				</li>
 			</ul>
@@ -393,9 +399,11 @@
 				<div class="info-item right-align" >
 					<h2 class="info-header">Контакты</h2>
 					<p class="info-text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-					<a href="">
-						<img src="img/map.jpg" width="560" height="222" alt="map">
-					</a>	
+					<div class="info-map">
+						<a href="">
+							<img src="img/map.jpg" width="560" height="222" alt="map">
+						</a>
+					</div>
 					<a class="link-striked" href="">Напишите нам</a>
 				</div>
 		</section>
@@ -404,14 +412,19 @@
 			<div class="container">
 				<div class="footer-row">
 					<div class="logo-footer">
-						DEVICE
+						<a href="index.html">DEVICE</a>
 					</div>
 					<ul class="footer-user-menu">
 						<li>
-							<a class="user-menu-item" href="">
+							<a class="user-menu-item" href="user-profile.html">
 								<svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><path fill="#272525" d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/></svg><span>Войти</span>
 							</a>
 						</li>
+						<!-- <li class="left-align"> -->
+							<!-- <a class="logout" href=""> -->
+								<!-- Выйти -->
+							<!-- </a> -->
+						<!-- </li> -->
 						<li>
 							<a class="user-menu-item" href="">
 								<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><path d="M8 2h1.984v8H8zM0 3h1.984v7H0zM4 0h2v10H4z"/>
@@ -421,12 +434,11 @@
 						<li>
 							<a class="user-menu-item" href="">
 								<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path d="M11.864 3.017a.429.429 0 0 0-.327-.154H9.225V4.09c0 .563-.484 1.022-1.08 1.022-.594 0-1.078-.458-1.078-1.022V2.863H4.909V4.09c0 .563-.485 1.022-1.08 1.022-.595 0-1.078-.458-1.078-1.022V2.863H.438a.43.43 0 0 0-.327.154.472.472 0 0 0-.108.358l.776 7.134c.015.806.642 1.455 1.411 1.455h7.595c.77 0 1.396-.649 1.411-1.455l.776-7.134a.476.476 0 0 0-.108-.358z"/><path d="M3.829 4.499c.239 0 .433-.184.433-.409V1.84c0-.632.672-1.022 1.295-1.022h1.079c.655 0 1.078.401 1.078 1.022v2.25c0 .225.194.409.431.409.239 0 .433-.184.433-.409V1.84C8.577.773 7.761 0 6.636 0H5.557c-1.19 0-2.159.826-2.159 1.84v2.25c0 .225.194.409.431.409z"/>
-								</svg>
-								<span>Корзина</span>
+								</svg><span>Корзина</span>
 							</a>
 						</li>
 					</ul>
-				</div>	
+				</div>
 				<div class="footer-row">	
 					<p class="footer-text footer-address">г. Москва, ул. Строителей, 15</p>
 					<ul class="footer-main-menu">
@@ -436,30 +448,30 @@
 					</ul>
 					<p class="footer-text footer-phone">Тел.: +7 (495) 495-95-95</p>
 				</div>	
-				<div class="footer-row">
-						<ul class="footer-social">
-							<li>
-								<a class="social-button" href="#">
-									<span class="visually-hidden">Фейсбук</span>
-									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="#FFF" d="M16 0C7.164 0 0 7.163 0 16s7.164 16 16 16c8.837 0 16-7.164 16-16S24.837 0 16 0zm4.062 9.455h-3.021v3.444h3.021v3.445h-3.021v8.61H14.02v-8.61H11v-3.445h3.021V9.455c0-1.902 1.353-3.445 3.021-3.445h3.021v3.445z"/>
-									</svg>
-								</a>
-							</li>
-							<li>
-								<a class="social-button" href="#">
-									<span class="visually-hidden">Инстаграм</span>
-									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g fill="#FFF"><path d="M20.916 16a4.938 4.938 0 1 1-9.877 0c0-.394.051-.773.138-1.14h-.897v6.838h11.396V14.86h-.897c.086.367.137.746.137 1.14z"/><path d="M15.978 18.659c1.466 0 2.659-1.193 2.659-2.659s-1.193-2.659-2.659-2.659c-1.466 0-2.659 1.193-2.659 2.659s1.192 2.659 2.659 2.659zM18.637 10.302h3.039v3.039h-3.039z"/><path d="M16 0C7.164 0 0 7.164 0 16c0 8.837 7.164 16 16 16 8.837 0 16-7.163 16-16 0-8.836-7.163-16-16-16zm7.955 21.698a2.285 2.285 0 0 1-2.279 2.279H10.279A2.285 2.285 0 0 1 8 21.698V10.302a2.286 2.286 0 0 1 2.279-2.279h11.396a2.286 2.286 0 0 1 2.279 2.279v11.396z"/></g>
-									</svg>
-								</a>
-							</li>
-							<li>
-								<a class="social-button" href="#">
-									<span class="visually-hidden">Твиттер</span>
-									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="#FFF" d="M16 0C7.164 0 0 7.164 0 16c0 8.837 7.164 16 16 16 8.837 0 16-7.163 16-16 0-8.836-7.163-16-16-16zm7.944 12.809c-.251 6.516-3.463 10.832-10.992 10.702h-.486c-.447 0-4.543-.443-5.344-1.823 2.479.19 4.247-.406 5.12-1.136-1.048-.289-2.923-.461-3.251-2.848.384.104.618.221 1.299.113-1.307-.824-2.758-1.519-2.679-3.643.311.317 1.164.518 1.46.457-.768-.233-2.149-3.244-.974-4.781 1.984 1.79 4.075 3.482 7.804 3.643.227-2.214 1.24-3.699 3.168-4.325 1.84-.479 3.255.26 3.901 1.138.737-.224 1.453-.466 2.193-.685-.004.833-.569 1.463-.935 1.709.747.165 1.423-.475 1.423-.475-.184.963-1.094 1.725-1.707 1.954z"/>
-									</svg>
-								</a>
-							</li>
-						</ul>
+				<div class="footer-row last-row">
+					<ul class="footer-social">
+						<li>
+							<a class="social-button" href="#">
+								<span class="visually-hidden">Фейсбук</span>
+								<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="#FFF" d="M16 0C7.164 0 0 7.163 0 16s7.164 16 16 16c8.837 0 16-7.164 16-16S24.837 0 16 0zm4.062 9.455h-3.021v3.444h3.021v3.445h-3.021v8.61H14.02v-8.61H11v-3.445h3.021V9.455c0-1.902 1.353-3.445 3.021-3.445h3.021v3.445z"/>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a class="social-button" href="#">
+								<span class="visually-hidden">Инстаграм</span>
+								<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g fill="#FFF"><path d="M20.916 16a4.938 4.938 0 1 1-9.877 0c0-.394.051-.773.138-1.14h-.897v6.838h11.396V14.86h-.897c.086.367.137.746.137 1.14z"/><path d="M15.978 18.659c1.466 0 2.659-1.193 2.659-2.659s-1.193-2.659-2.659-2.659c-1.466 0-2.659 1.193-2.659 2.659s1.192 2.659 2.659 2.659zM18.637 10.302h3.039v3.039h-3.039z"/><path d="M16 0C7.164 0 0 7.164 0 16c0 8.837 7.164 16 16 16 8.837 0 16-7.163 16-16 0-8.836-7.163-16-16-16zm7.955 21.698a2.285 2.285 0 0 1-2.279 2.279H10.279A2.285 2.285 0 0 1 8 21.698V10.302a2.286 2.286 0 0 1 2.279-2.279h11.396a2.286 2.286 0 0 1 2.279 2.279v11.396z"/></g>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a class="social-button" href="#">
+								<span class="visually-hidden">Твиттер</span>
+								<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="#FFF" d="M16 0C7.164 0 0 7.164 0 16c0 8.837 7.164 16 16 16 8.837 0 16-7.163 16-16 0-8.836-7.163-16-16-16zm7.944 12.809c-.251 6.516-3.463 10.832-10.992 10.702h-.486c-.447 0-4.543-.443-5.344-1.823 2.479.19 4.247-.406 5.12-1.136-1.048-.289-2.923-.461-3.251-2.848.384.104.618.221 1.299.113-1.307-.824-2.758-1.519-2.679-3.643.311.317 1.164.518 1.46.457-.768-.233-2.149-3.244-.974-4.781 1.984 1.79 4.075 3.482 7.804 3.643.227-2.214 1.24-3.699 3.168-4.325 1.84-.479 3.255.26 3.901 1.138.737-.224 1.453-.466 2.193-.685-.004.833-.569 1.463-.935 1.709.747.165 1.423-.475 1.423-.475-.184.963-1.094 1.725-1.707 1.954z"/>
+								</svg>
+							</a>
+						</li>
+					</ul>
 					<a class="academy-logo" href="https://htmlacademy.ru/intensive/htmlcss"> 
 						 <span class="visually-hidden">Html-academy</span>
 						 <svg xmlns="http://www.w3.org/2000/svg" width="26.943" height="34.09" viewBox="0 0 26.943 34.09"><path fill="#FFC600" d="M13.62.017L13.472 0 0 1.412v24.661l13.473 8.017 13.43-7.99.042-.025V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.548-1.212L25.02 3.147v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.014 1.415 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.031-1.787-.014 1.413 1.853 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.016 1.044-7.942-4.728-.015 1.416 7.979 4.795.018 1.076-7.973-4.74-.013 1.414 8.021 4.822.046.025 8.143-4.872-.011-5.177 3.415-2.036v10.021L13.472 31.85 1.925 24.979v-9.852z"/>
@@ -469,27 +481,29 @@
 			</div>		
 		</footer>
 		
-		<section class="modal modal-sendus visually-hidden">
+		<section class="modal modal-sendus">
 			<button class="modal-close" type="button">Закрыть</button>
 			<form class="send-form" action="https://echo.htmlacademy.ru" method="post">
-				<p>
-				<label class="filter-category" for="message-username">Ваше имя</label>
-				<input type="text" name="message-username" id="message-username" placeholder="Имя Фамилия" required>
-				</p>
-				
-				<p>
-				<label class="filter-category" for="message-mail">Ваш e-mail</label>
-				<input type="text" name="message-mail" id="message-mail" pattern="" placeholder="email@example.com" required>
-				</p>
-				
-				<p>
-				<label class="filter-category" for="message-text">Текст письма</label>
-				<textarea rows="5" cols="100" name="message-text" id="message-text" required>В свободной форме
-				</textarea>
-				</p>
-				
-				<button class="filter-show" type="button">Отправить</button>
+				<div class="inputs-container">
+					<p class="item-half">
+						<label class="modal-label" for="message-username">Ваше имя</label>
+						<input type="text" name="message-username" id="message-username" placeholder="Имя Фамилия" required autofocus>
+					</p>
+					
+					<p class="item-half">
+						<label class="modal-label" for="message-mail">Ваш e-mail</label>
+						<input type="email" name="message-mail" id="message-mail" placeholder="email@example.com" required>
+					</p>
+				</div>	
+	
+				<label class="modal-label" for="message-text">Текст письма</label>
+				<textarea rows="7" cols="77" name="message-text" id="message-text" placeholder="В свободной форме" required></textarea>
+
+				<button class="btn-striked" type="submit">Отправить</button>
 			</form>
+		</section>
+		<section class="modal modal-map visually-hidden">
+			<button class="modal-close" type="button">Закрыть</button>
 		</section>
 	</body>
 </html>
