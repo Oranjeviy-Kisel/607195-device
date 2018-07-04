@@ -35,7 +35,7 @@
 								<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><path d="M8 2h1.984v8H8zM0 3h1.984v7H0zM4 0h2v10H4z"/>
 								</svg><span>Сравнить</span>
 							</a>
-						</li>				
+						</li>
 						<li class="margin-left-40">
 							<a class="user-nav-item" href="">
 								<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path d="M11.864 3.017a.429.429 0 0 0-.327-.154H9.225V4.09c0 .563-.484 1.022-1.08 1.022-.594 0-1.078-.458-1.078-1.022V2.863H4.909V4.09c0 .563-.485 1.022-1.08 1.022-.595 0-1.078-.458-1.078-1.022V2.863H.438a.43.43 0 0 0-.327.154.472.472 0 0 0-.108.358l.776 7.134c.015.806.642 1.455 1.411 1.455h7.595c.77 0 1.396-.649 1.411-1.455l.776-7.134a.476.476 0 0 0-.108-.358z"/><path d="M3.829 4.499c.239 0 .433-.184.433-.409V1.84c0-.632.672-1.022 1.295-1.022h1.079c.655 0 1.078.401 1.078 1.022v2.25c0 .225.194.409.431.409.239 0 .433-.184.433-.409V1.84C8.577.773 7.761 0 6.636 0H5.557c-1.19 0-2.159.826-2.159 1.84v2.25c0 .225.194.409.431.409z"/>
@@ -115,13 +115,13 @@
 							<div class="range-controls">	
 							<!-- контрол мин цены -->	
 								<div class="range-toggle range-toggle-min">
-									<label class="filter-cost" for="cost-low">от <input class="filter-cost-low" type="text" name="cost-low" value="0">
+									<label class="filter-cost">от <input class="filter-cost-low" type="text" name="cost-low" value="0">
 									</label>
 								</div>
 								
 							<!-- контрол мах цены  -->	
 								<div class="range-toggle range-toggle-max">
-									<label class="filter-cost" for="cost-high">до <input class="filter-cost-high" type="text" name="cost-high" value="5000">
+									<label class="filter-cost">до <input class="filter-cost-high" type="text" name="cost-high" value="5000">
 									</label>
 								</div>
 							</div>
@@ -132,38 +132,33 @@
 							<legend class="filter-category">Цвет</legend>
 							<ul>
 								<li>
-									<label class="filter-value" for="black">
+									<label class="filter-value" for="black" >
 										<input class="visually-hidden" type="checkbox" name="black" id="black" checked>
-										<span class="checkbox-indicator"></span>
-										Черный
+										<span class="checkbox-indicator">Черный</span>	
 									</label>
 								</li>	
 								<li>
 									<label class="filter-value" for="white">
 										<input class="visually-hidden" type="checkbox" name="white" id="white">
-										<span class="checkbox-indicator"></span>
-										Белый
+										<span class="checkbox-indicator">Белый</span>	
 									</label>
 								</li>
 								<li>	
 									<label class="filter-value" for="blue">
-										<input class="visually-hidden" type="checkbox" name="blue" id="blue">
-										<span class="checkbox-indicator"></span>
-										Синий
+										<input class="visually-hidden" type="checkbox" name="blue" id="blue" checked>
+										<span class="checkbox-indicator">Синий</span>
 									</label>
 								</li>	
 								<li>	
 									<label class="filter-value" for="red">
 										<input class="visually-hidden" type="checkbox" name="red" id="red" checked>
-										<span class="checkbox-indicator"></span>
-										Красный
+										<span class="checkbox-indicator">Красный</span>
 									</label>
 								</li>
 								<li>	
 									<label class="filter-value" for="pink">
 										<input class="visually-hidden" type="checkbox" name="pink" id="pink">
-										<span class="checkbox-indicator"></span>
-										Розовый
+										<span class="checkbox-indicator">Розовый</span>
 									</label>
 								</li>
 							</ul>
@@ -175,20 +170,18 @@
 								<li>
 									<label class="filter-value" for="bt-yes">
 										<input class="visually-hidden" type="radio" name="bluetooth" value="bt-yes" id="bt-yes" checked>
-										<span class="radio-indicator"></span>
-										Есть
+										<span class="radio-indicator">Есть</span>
 									</label>
 								</li>
 								<li>
 									<label class="filter-value" for="bt-no">
 										<input class="visually-hidden" type="radio" name="bluetooth" value="bt-no" id="bt-no">
-										<span class="radio-indicator"></span>
-										Нет
+										<span class="radio-indicator">Нет</span>
 									</label>	
 								</li>	
 							</ul>
 						</fieldset>
-						<button class="btn-striked" id="catalog-show" type="">Показать</button>
+						<button class="btn-striked" id="catalog-show" type="submit">Показать</button>
 					</form>
 				</aside>
 			
@@ -240,7 +233,7 @@
 								<span class="sticker-new visually-hidden">New</span>
 							</div>
 							<p class="product-card-description">
-								<a class="card-name" href="#card-cost-high">Профессиональная селфи-палка</a>
+								<a class="card-name" href="#card-cost-high">Профессиональная<br>селфи-палка</a>
 								<span class="card-cost">1 500 руб.</span>
 							</p>
 						</li>
@@ -288,7 +281,6 @@
 								<li>
 									<a class="page-number" href="">3</a>
 								</li>
-								
 							</ul>
 						</li>
 						<li>
@@ -372,5 +364,6 @@
 				</div>	
 			</div>		
 		</footer>
+		<script src="js/script.js"></script>
 	</body>
 </html>

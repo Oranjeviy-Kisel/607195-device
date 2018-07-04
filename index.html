@@ -15,7 +15,7 @@
 						<label class="visually-hidden" for="search-value">
 							Поиск по сайту
 						</label> 
-						<input class="search-field" name="search" type="text" id="search-value" value="Поиск по сайту" autocomplete="off"><button class="search-button" type="submit">Найти</button>
+						<input class="search-field" name="search" type="text" id="search-value" placeholder="Поиск по сайту" autocomplete="off"><button class="search-button" type="submit">Найти</button>
 					</form>
 					<ul class="user-navigation-menu">
 						<li class="left-align">
@@ -28,7 +28,8 @@
 								<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><path d="M8 2h1.984v8H8zM0 3h1.984v7H0zM4 0h2v10H4z"/>
 								</svg><span>Сравнить</span>
 							</a>
-						</li>				
+						</li>
+
 						<li class="margin-left-40">
 							<a class="user-nav-item" href="">
 								<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path d="M11.864 3.017a.429.429 0 0 0-.327-.154H9.225V4.09c0 .563-.484 1.022-1.08 1.022-.594 0-1.078-.458-1.078-1.022V2.863H4.909V4.09c0 .563-.485 1.022-1.08 1.022-.595 0-1.078-.458-1.078-1.022V2.863H.438a.43.43 0 0 0-.327.154.472.472 0 0 0-.108.358l.776 7.134c.015.806.642 1.455 1.411 1.455h7.595c.77 0 1.396-.649 1.411-1.455l.776-7.134a.476.476 0 0 0-.108-.358z"/><path d="M3.829 4.499c.239 0 .433-.184.433-.409V1.84c0-.632.672-1.022 1.295-1.022h1.079c.655 0 1.078.401 1.078 1.022v2.25c0 .225.194.409.431.409.239 0 .433-.184.433-.409V1.84C8.577.773 7.761 0 6.636 0H5.557c-1.19 0-2.159.826-2.159 1.84v2.25c0 .225.194.409.431.409z"/>
@@ -46,10 +47,12 @@
 								<li><a href="catalog.html">Виртуальная реальность</a></li>
 								<li><a href="catalog.html">Моноподы для селфи</a></li>
 								<li><a href="catalog.html">Экшн-камеры</a></li>
+								
 							</ul>
 							<ul class="catalog-list">
 								<li><a href="catalog.html">Фитнес-браслеты</a></li>
 								<li><a href="catalog.html">Умные часы</a></li>
+
 							</ul>
 							<ul class="catalog-list">
 								<li><a href="catalog.html">Квадрокоптеры</a></li>
@@ -65,13 +68,6 @@
 					<li class="main-menu-item right-align">
 						<a href="">Контакты</a>
 					</li>
-					<!-- <li class="main-menu-item"> 
-						<a href="">Гарантия4</a>
-					</li>
-					<li class="main-menu-item">
-						<a href="">Гарантия5</a>
-					</li>
-					-->
 				</ul>	
 			</header>
 		</div>
@@ -80,7 +76,7 @@
 			<section class="slider">
 				<div class="slides">
 					<!-- Первый слайд -->
-					<div class="slide">
+					<div class="slide visually-hidden">
 						<div class="slide-image">
 							<img src="img/slider-1.png" width="600" height="500" alt="monopod">
 						</div>
@@ -112,7 +108,7 @@
 				
 		
 					<!-- Второй слайд -->
-					<div class="slide visually-hidden">
+					<div class="slide">
 						<div class="slide-image">
 							<img src="img/slider-2.png" width="600" height="500" alt="fitness-braclete">
 						</div>
@@ -123,7 +119,7 @@
 								правильно!
 							</h2>
 							<p class="slide-description">
-								Мотивирующие фитнес-браслеты помогут найти в себе силы
+								Мотивирующие фитнес-браслеты помогут найти в себе силы<br>
 								не пропускать занятия и соблюдать диету.
 							</p>
 							<a class="link-striked" href="">Подробнее</a>
@@ -167,26 +163,11 @@
 							</table>
 						</div>	
 					</div>
-				</div>		
-			
-					<ul class="slider-radiogroup">
-						<li>
-							<label class="slider-indicator">
-								<input type="radio" name="slider-radio" class="" checked>
-							</label>
-						</li>
-						<li>
-							<label class="slider-indicator">
-								<input type="radio" name="slider-radio" class="">
-							</label>	
-						</li>
-						<li>
-							<label class="slider-indicator">
-								<input type="radio" name="slider-radio" class="">
-							</label>
-						</li>					
-					</ul>
+				</div>
 				
+				<div class="slider-radiogroup">
+					<button class="toggle toggle-active" type="button"></button><button class="toggle" type="button"></button><button class="toggle" type="button"></button>
+				</div>
 			</section>
 		</div>
 	
@@ -194,7 +175,7 @@
 			<h2 class="visually-hidden">Категории продуктов</h2>
 			<ul class="product-categories">
 				<li class="product-category">
-						<a class="category-item" href="">
+						<a class="category-item" href="catalog.html">
 							<div class="category-image">
 								<svg xmlns="http://www.w3.org/2000/svg" width="97" height="55" viewBox="0 0 97 55"><g fill="#363636"><path d="M84.131 32.639V20.003c0-1.309 1.045-2.37 2.335-2.37l8.326 1.581V11.02c0-2.355-1.708-3.431-4.202-4.265L67.403.175c1.616 1.391 1.889 2.04 1.889 4.396V49.78c0 2.356-.45 4.066-1.967 5.21l23.265-7.065c2.401-.833 4.202-4.216 4.202-6.572V33.44l-8.326 1.567c-1.29.002-2.335-1.06-2.335-2.368z"/><path d="M95.129 20.979l-7.598-1.444c-1.008 0-1.824.829-1.824 1.851v9.868c0 1.023.816 1.852 1.824 1.852l7.598-1.431c1.154-.419 1.824-.829 1.824-1.852V22.83c0-1.022-.766-1.507-1.824-1.851zM67.17 4.483c0-5.08-4.232-4.459-4.232-4.459S5.832 4.738 2.838 5.145.001 9.532.001 9.532L0 45.812c0 3.743 2.599 3.753 2.599 3.753l16.477 1.403L27.212 39.3s1.109-1.828 2.505-1.828c1.397 0 2.432 1.861 2.432 1.861l9.061 13.521s18.895 1.909 22.521 1.909c3.626-.001 3.439-5.024 3.439-5.024V4.483zM12.982 37.192c-3.698 0-6.696-4.601-6.696-10.275s2.998-10.275 6.696-10.275c3.698 0 6.696 4.601 6.696 10.275s-2.998 10.275-6.696 10.275zm36.158 1.426c-4.662 0-8.441-5.239-8.441-11.701 0-6.463 3.78-11.702 8.441-11.702 4.662 0 8.442 5.239 8.442 11.702 0 6.462-3.78 11.701-8.442 11.701z"/></g>
 								</svg>
@@ -203,16 +184,16 @@
 						</a>
 					</li>
 				<li class="product-category">
-						<a class="category-item" href="">
+						<a class="category-item" href="catalog.html">
 							<div class="category-image">
 								<svg xmlns="http://www.w3.org/2000/svg" width="86" height="117" viewBox="0 0 86 117"><g fill="#363636"><path d="M82.821 4.011H3.33A3.188 3.188 0 0 0 .142 7.199v46.413a3.187 3.187 0 0 0 3.188 3.189h79.492a3.188 3.188 0 0 0 3.189-3.189V7.199a3.189 3.189 0 0 0-3.19-3.188zM8.392 37.236h-.226a3.19 3.19 0 0 1-3.189-3.189v-7.283a3.188 3.188 0 0 1 3.189-3.188h.226v13.66zm61.231 15.172H13.341V8.402h56.282v44.006zM78.4 34.552c-2.289 0-4.146-1.855-4.146-4.147s1.856-4.147 4.146-4.147a4.146 4.146 0 1 1 0 8.294zM31.497 0h23.157v2.758H31.497zM46.608 64.861v-2.973h8.046V59.13H31.498v2.758h8.045v35.246a6.068 6.068 0 0 0-3.635 5.559V117h14.335v-14.307a6.062 6.062 0 0 0-3.636-5.557v-27.99h4.796l5.051 1.213v-6.711l-5.051 1.213h-4.795z"/></g>
 								</svg>
 							</div>
-							<h4 class="category-name">Моноподы для селфи</h4>
+							<h4 class="category-name">Моноподы<br>для селфи</h4>
 						</a>
 					</li>
 				<li class="product-category">
-						<a class="category-item" href="">
+						<a class="category-item" href="catalog.html">
 							<div class="category-image">
 								<svg xmlns="http://www.w3.org/2000/svg" width="71" height="87" viewBox="0 0 71 87"><g fill="#363636"><path d="M53.349 1.49c0-.736-.578-1.49-1.311-1.49H9.053C8.32 0 7.672.754 7.672 1.49v3.522h45.676V1.49zM54.202 81.809h-9.597V71.426h-6.958v2.507H18.774c-.537-1.254-1.757-2.148-3.181-2.148H3.559C1.642 71.784 0 73.387 0 75.311v3.018c0 1.924 1.642 3.48 3.559 3.48h12.035c1.511 0 2.792-.896 3.269-2.326h18.785v2.326H28.13c-.533 0-1.01.437-1.01.972v3.172c0 .535.478 1.048 1.01 1.048h26.072c.533 0 .93-.513.93-1.048V82.78c0-.535-.397-.971-.93-.971zM60.666 12.39a7.037 7.037 0 0 0-6.771-5.05H7.148C3.25 7.34 0 10.449 0 14.361v46.9c0 3.912 3.25 7.121 7.148 7.121h46.747c3.898 0 7.126-3.209 7.126-7.121V50.915a23.228 23.228 0 0 0 10.001-19.164c-.001-8.079-4.132-15.181-10.356-19.361zM12.238 62.151c-3.259 0-5.901-2.65-5.901-5.921 0-3.27 2.642-5.922 5.901-5.922s5.902 2.652 5.902 5.922c0 3.271-2.643 5.921-5.902 5.921zm5.961-32.605a1.42 1.42 0 0 1-1.418 1.422h-8.94a1.42 1.42 0 0 1-1.418-1.422v-14.16a1.42 1.42 0 0 1 1.418-1.423h8.939a1.42 1.42 0 0 1 1.418 1.423v14.16zm29.563 22.312c-11.076 0-20.057-9.01-20.057-20.123s8.98-20.124 20.057-20.124c11.077 0 20.058 9.01 20.058 20.124s-8.981 20.123-20.058 20.123z"/><ellipse cx="47.762" cy="31.735" rx="12.188" ry="12.229"/><circle cx="31.562" cy="31.736" r="1.435"/><circle cx="63.963" cy="31.736" r="1.435"/><circle cx="39.109" cy="17.994" r="1.435"/><ellipse cx="56.415" cy="45.476" rx="1.43" ry="1.436"/><circle cx="55.697" cy="17.565" r="1.435"/><circle cx="39.828" cy="45.906" r="1.435"/></g>
 								</svg>
@@ -221,7 +202,7 @@
 						</a>
 					</li>
 				<li class="product-category">	
-						<a class="category-item" href="">
+						<a class="category-item" href="catalog.html">
 							<div class="category-image">
 								<svg xmlns="http://www.w3.org/2000/svg" width="107px" height="65px" viewBox="0 0 107 65" enable-background="new 0 0 107 65" xml:space="preserve">
 								<g>
@@ -299,7 +280,7 @@
 						</a>
 					</li>
 				<li class="product-category">	
-						<a class="category-item" href="">
+						<a class="category-item" href="catalog.html">
 							<div class="category-image">
 								<svg xmlns="http://www.w3.org/2000/svg" width="56" height="98" viewBox="0 0 56 98"><g fill="#363636"><path d="M54.494 32.197h-1.515v-4.64c0-5.052-4.087-9.186-9.082-9.186H9.082C4.086 18.372 0 22.505 0 27.557v42.868c0 5.052 4.087 9.185 9.083 9.185h34.815c4.995 0 9.082-4.133 9.082-9.185V67.01h1.515a.764.764 0 0 0 .757-.764V52.467a.765.765 0 0 0-.757-.766H52.98v-8.788h1.515c.832 0 1.514-.688 1.514-1.531v-7.654a1.529 1.529 0 0 0-1.515-1.531zm-20.412-3.109c2.926 0 5.299 2.398 5.299 5.358s-2.373 5.358-5.299 5.358-5.298-2.398-5.298-5.358 2.372-5.358 5.298-5.358zm-15.137 0c2.925 0 5.298 2.398 5.298 5.358s-2.373 5.358-5.298 5.358c-2.926 0-5.298-2.398-5.298-5.358s2.372-5.358 5.298-5.358zM5.297 49.397c0-2.959 2.371-5.358 5.298-5.358 2.926 0 5.298 2.399 5.298 5.358 0 2.959-2.373 5.358-5.298 5.358-2.927.001-5.298-2.399-5.298-5.358zm13.648 19.497c-2.926 0-5.298-2.398-5.298-5.358s2.372-5.358 5.298-5.358c2.925 0 5.298 2.398 5.298 5.358s-2.373 5.358-5.298 5.358zm1.49-19.903c0-3.382 2.711-6.124 6.055-6.124s6.055 2.742 6.055 6.124-2.711 6.124-6.055 6.124c-3.344-.001-6.055-2.742-6.055-6.124zm13.647 19.903c-2.926 0-5.298-2.398-5.298-5.358s2.372-5.358 5.298-5.358 5.299 2.398 5.299 5.358-2.373 5.358-5.299 5.358zm8.302-14.138c-2.927 0-5.298-2.399-5.298-5.358 0-2.959 2.371-5.358 5.298-5.358 2.926 0 5.298 2.399 5.298 5.358 0 2.958-2.372 5.358-5.298 5.358zM9.646 15.31h33.687c.843 0 1.432-.681 1.306-1.514L43.023 3.028l-.002-.002C42.771 1.362 41.189 0 39.506 0H13.474c-1.686 0-3.268 1.362-3.517 3.028L8.342 13.795c-.125.833.461 1.515 1.304 1.515zM43.333 82.671H9.646c-.843 0-1.429.683-1.304 1.516l1.615 10.767c.25 1.666 1.832 3.028 3.516 3.028h26.032c1.684 0 3.266-1.362 3.517-3.026v-.002l1.615-10.767c.128-.833-.461-1.516-1.304-1.516z"/></g>
 								</svg>
@@ -308,7 +289,7 @@
 						</a>
 					</li>	
 				<li class="product-category">	
-						<a class="category-item" href="">
+						<a class="category-item" href="catalog.html">
 							<div class="category-image">
 								<svg xmlns="http://www.w3.org/2000/svg" width="132" height="69" viewBox="0 0 132 69"><g fill="#363636"><path d="M12.052.258C6.507.745 1.838 1.85.575 2.93c-.722.616-.722.616-.232 1.156.644.72 3.713 1.645 7.247 2.237 3.998.668 12.51.693 13.724.051 1.211-.668 1.624-1.414 1.624-2.981 0-1.619-.62-2.416-2.218-2.853C19.274.154 14.94 0 12.052.258zM25.774.488c-.129.283-.258 2.108-.258 4.112 0 4.061.155 3.778-2.192 3.933l-1.03.077-.13 2.545-.129 2.544-1.186.283c-2.58.668-4 2.595-3.792 5.294.128 1.927 1.03 3.341 2.579 4.087 1.109.513 1.47.538 11.246.538 5.545 0 10.137.079 10.188.18.051.13-1.11 9.408-2.58 20.64-1.444 11.23-2.682 20.997-2.708 21.666-.051 1.617.826 2.62 2.348 2.62 1.237 0 2.012-.64 2.321-1.9.13-.514 1.496-10.334 3.018-21.822 1.522-11.463 2.863-20.869 2.94-20.869.104 0 1.084 1.413 2.193 3.136 2.94 4.626 2.399 4.317 7.635 4.317h4.359v5.63l-5.133.077c-4.72.077-5.21.127-5.881.615-1.573 1.157-1.625 1.415-1.625 10.977 0 9.534.026 9.792 1.522 11.05l.851.695H81.695l.851-.696c1.496-1.257 1.52-1.515 1.52-11.05 0-9.56-.05-9.819-1.622-10.976-.671-.488-1.161-.538-5.882-.615l-5.132-.077v-5.63h4.36c5.234 0 4.693.309 7.633-4.317 1.11-1.723 2.09-3.136 2.194-3.136.076 0 1.418 9.406 2.94 20.869 1.522 11.488 2.889 21.308 3.018 21.821.31 1.26 1.082 1.902 2.321 1.902 1.521 0 2.4-1.004 2.347-2.621-.026-.67-1.264-10.436-2.71-21.666-1.468-11.232-2.63-20.51-2.577-20.64.05-.101 4.641-.18 10.19-.18 9.774 0 10.135-.025 11.243-.538 1.548-.746 2.45-2.16 2.58-4.087.206-2.699-1.212-4.626-3.792-5.294l-1.187-.283-.127-2.544-.13-2.545-1.031-.077c-2.347-.155-2.194.128-2.194-3.933 0-2.004-.128-3.829-.257-4.112-.206-.36-.543-.488-1.367-.488-.619 0-1.238.128-1.42.309-.206.205-.31 1.465-.31 3.932 0 2.467-.102 3.727-.309 3.932-.18.18-.901.308-1.65.308-1.625 0-1.65.052-1.65 3.11v2.287H32.48v-2.287c0-3.058-.024-3.11-1.65-3.11-.748 0-1.47-.129-1.65-.308-.207-.205-.31-1.465-.31-3.932 0-2.467-.103-3.727-.31-3.932-.18-.18-.8-.309-1.418-.309-.825 0-1.16.128-1.368.488zm42.843 40.12c2.889.899 5.392 3.393 6.166 6.168.439 1.543.31 4.216-.284 5.784-.696 1.875-2.685 4.01-4.565 4.935-1.29.642-1.754.719-3.921.719s-2.631-.077-3.92-.719c-1.885-.926-3.87-3.06-4.567-4.935-.592-1.568-.722-4.24-.283-5.784.748-2.723 3.25-5.27 6.061-6.168 2.012-.642 3.3-.642 5.313 0z"/><path d="M63.794 44.438c-2.037.925-3.507 3.649-3.069 5.73.774 3.677 4.823 5.553 7.996 3.702 1.985-1.158 2.99-3.547 2.45-5.783-.568-2.39-2.734-4.138-5.158-4.138-.646 0-1.626.232-2.22.489zM36.092.154c-3.92.668-4.513 1.131-4.513 3.444 0 1.825.463 2.416 2.268 2.956 1.55.462 7.172.514 10.5.128 6.86-.822 11.321-2.544 9.698-3.752-1.265-.9-4.902-1.876-9.054-2.39-2.475-.308-7.996-.54-8.9-.386zM89.484.258C83.165.848 77.62 2.339 77.62 3.444c0 1.722 7.84 3.47 15.63 3.495 5.804 0 7.196-.642 7.196-3.34 0-1.825-.619-2.622-2.373-3.085C96.423.103 92.398 0 89.484.258zM112.776.283c-1.78.231-3.018.77-3.43 1.491-.387.77-.31 2.904.154 3.572.928 1.31 1.652 1.465 7.068 1.465 3.661 0 5.802-.129 7.867-.488 3.534-.592 6.603-1.517 7.248-2.237.49-.54.49-.54-.233-1.156-1.34-1.13-5.958-2.185-11.916-2.672-3.481-.283-4.488-.283-6.758.025z"/></g>
 								</svg>
@@ -322,11 +303,11 @@
 		<section class="services">
 			<div class="container flex-horizontal">
 				<ul class="services-list">
-					<li>
-						<a href="">Доставка</a>
-					</li>
 					<li class="list-item-active">
-						<a>Гарантия</a>
+						<a>Доставка</a>
+					</li>
+					<li>
+						<a href="">Гарантия</a>
 					</li>
 					<li>
 						<a href="">Кредит</a>
@@ -342,17 +323,17 @@
 						</p>
 					</div>
 				
-					<div class="services-slide services-warranty">
+					<div class="services-slide services-warranty visually-hidden">
 						<h2 class="service-header">Гарантия</h2>
 						<p class="service-description">
 							Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>
 							Товар, не дом, конечно же.
 						</p>
 					</div>
-					<div class="services-slide services-credit visually-hidden">
+					<div class="services-slide services-credit">
 						<h2 class="service-header">Кредит</h2>
 						<p class="service-description">
-							Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется
+							Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные<br>условия кредита. Выгодные для нашего банка, разумеется
 						</p>
 					</div>
 				</div>	
@@ -367,17 +348,17 @@
 					</a>	
 				</li>
 				<li class="client-logo-sandwich">
-					<a class="client-logo" href="">
+					<a class="client-logo" href="http://www.client.ru">
 						<img src="img/logo-2-grey.jpg" alt="logo-1" width="260" height="100">
 					</a>
 				</li>
 				<li class="client-logo-sandwich">
-					<a class="client-logo" href="">
+					<a class="client-logo" href="http://www.client.ru">
 						<img src="img/logo-3-grey.jpg" alt="logo-1" width="260" height="100">
 					</a>	
 				</li>
 				<li class="client-logo-sandwich">
-					<a class="client-logo" href="">
+					<a class="client-logo" href="http://www.client.ru">
 						<img src="img/logo-4-grey.jpg" alt="logo-1" width="260" height="100">
 					</a>	
 				</li>
@@ -387,36 +368,34 @@
 		<section class="container flex-horizontal">
 				<div class="info-item">
 					<h2 class="info-header">О нас</h2>
-					<p class="info-text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-					<p class="info-text">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+					<p class="info-text">Огромный выбор гаджетов не оставит равнодушным гика,<br>который есть в каждом из нас.</p>
+					<p class="info-text">Мы можем доставить ваш товар в самые отдаленные точки<br>России! DEVICE работает со многими транспортными компаниями:</p>
 					<ul class="transport-list">
 						<li>Деловые Линии</li>
 						<li>Автотрейдинг</li>
 						<li>ЖелДорЭкспедиция</li>
 					</ul>
-					<a class="link-striked" href="">Подробнее о нас</a>
+					<a class="link-striked" href="about.html">Подробнее о нас</a>
 				</div>
 				<div class="info-item right-align" >
 					<h2 class="info-header">Контакты</h2>
 					<p class="info-text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
 					<div class="info-map">
-						<a href="">
+						<a href="https://www.google.com/maps/place/%D0%A8%D0%BA%D0%BE%D0%BB%D0%B0+%E2%84%96+118/@55.6869139,37.5278651,17z/data=!3m1!4b1!4m5!3m4!1s0x46b54cf6f5f5c4ad:0xbce6da52bb328417!8m2!3d55.6869115!4d37.5296362">
 							<img src="img/map.jpg" width="560" height="222" alt="map">
 						</a>
 					</div>
-					<a class="link-striked" href="">Напишите нам</a>
+					<a class="link-striked" href="" id="write-us">Напишите нам</a>
 				</div>
 		</section>
 	
 		<footer class="main-footer">
 			<div class="container">
 				<div class="footer-row">
-					<div class="logo-footer">
-						<a href="index.html">DEVICE</a>
-					</div>
+					<div class="logo-footer">DEVICE</div>
 					<ul class="footer-user-menu">
 						<li>
-							<a class="user-menu-item" href="user-profile.html">
+							<a class="user-menu-item" href="">
 								<svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><path fill="#272525" d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/></svg><span>Войти</span>
 							</a>
 						</li>
@@ -486,18 +465,20 @@
 			<form class="send-form" action="https://echo.htmlacademy.ru" method="post">
 				<div class="inputs-container">
 					<p class="item-half">
-						<label class="modal-label" for="message-username">Ваше имя</label>
-						<input type="text" name="message-username" id="message-username" placeholder="Имя Фамилия" required autofocus>
+						<label class="modal-label" for="username">Ваше имя</label>
+						<input type="text" name="message-username" id="user-name" placeholder="Имя Фамилия"
+						 pattern="^[a-zA-ZА-Яа-яЁё\s]+$" autocomplete="off" autofocus>
 					</p>
 					
 					<p class="item-half">
-						<label class="modal-label" for="message-mail">Ваш e-mail</label>
-						<input type="email" name="message-mail" id="message-mail" placeholder="email@example.com" required>
+						<label class="modal-label" for="message-email">Ваш e-mail</label>
+						<input type="text" name="message-email" id="user-email" placeholder="email@example.com" 
+						pattern="^[а-яЁёa-z0-9._%+-]+@[а-яЁёa-z0-9.-]+\.[a-zа-яё]{2,4}$" autocomplete="off">
 					</p>
 				</div>	
 	
 				<label class="modal-label" for="message-text">Текст письма</label>
-				<textarea rows="7" cols="77" name="message-text" id="message-text" placeholder="В свободной форме" required></textarea>
+				<textarea rows="7" cols="77" name="message-text" id="message-text" placeholder="В свободной форме" autocomplete="off"></textarea>
 
 				<button class="btn-striked" type="submit">Отправить</button>
 			</form>
@@ -505,5 +486,7 @@
 		<section class="modal modal-map visually-hidden">
 			<button class="modal-close" type="button">Закрыть</button>
 		</section>
+		
+		<script src="js/script.js"></script>
 	</body>
 </html>
