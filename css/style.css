@@ -1142,16 +1142,6 @@ a {
     background-color: #ff5252;
 }
 
-.modal-map {
-	box-sizing: border-box;
-	width: 960px;
-	height:559px;
-	left: 50%;
-	margin-left: -480px;
-	top: 16%;
-	background-image: url("../img/map-big.jpg")
-}
-
 .modal-close {
 	box-sizing: border-box;
 	position: absolute;
@@ -1164,6 +1154,7 @@ a {
 	border: 0;
 	border-radius: 55px;
 	cursor: pointer;
+	z-index:3;
 }
 .modal-close::before,
 .modal-close::after {
@@ -1303,6 +1294,29 @@ a {
 	box-shadow: none;
 	background-color: rgba(237, 181, 181, 0.5); 
 }
+
+
+.modal-map {
+	box-sizing: border-box;
+	width: 960px;
+	height:559px;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+.modal-map iframe {
+  position: relative;
+  z-index: 2;
+  border: none;
+}
+.modal-map .map-wrapper{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	margin: 0;
+}
+
 
 /* стили для страницы catalog.html*/
 
