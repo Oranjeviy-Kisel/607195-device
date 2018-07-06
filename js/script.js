@@ -3,11 +3,11 @@
 	var popup = document.querySelector(".modal-sendus");
 	var close = popup.querySelector(".modal-close");
 	
-	var form = popup.querySelector("form");
+	var allform = popup.querySelector("form");
 	var usrname = popup.querySelector("[name=message-username]");
 	var usremail = popup.querySelector("[name=message-email]");
 	
-	var text = popup.querySelector("[name=message-text]");
+	var usrtext = popup.querySelector("[name=message-text]");
 	
 	
 	link.addEventListener("click", function (evt) {
@@ -18,15 +18,34 @@
 	close.addEventListener("click", function (evt) {
 		evt.preventDefault();
 		popup.classList.remove("modal-show");
-		popup.classList.remove("modal-error");
+		usrname.classList.remove("modal-error");
+		usremail.classList.remove("modal-error");
+		usrtext.classList.remove("modal-error");
 	});
 	
-	form.addEventListener("submit", function (evt) {
-		if (!usrname.value || !usremail.value || !text.value) {
+	allform.addEventListener("submit", function (evt) {
+		if (!usrname.value) {
 			evt.preventDefault();
-			popup.classList.add("modal-error");
-			console.log("Заполните все поля!");
+			usrname.classList.remove("modal-error");
+			usrname.offsetWidth = usremail.offsetWidth;
+			usrname.classList.add("modal-error");
+		} else if (!usremail.value) {
+			evt.preventDefault();
+			usremail.classList.remove("modal-error");
+			usremail.offsetWidth = usremail.offsetWidth;
+			usremail.classList.add("modal-error");
+		} else if (!usrtext.value) {
+			evt.preventDefault();
+			usrtext.classList.remove("modal-error");
+			usrtext.offsetWidth = usrtext.offsetWidth;
+			usrtext.classList.add("modal-error");
+		} else {
+			popup.classList.remove("modal-show");
+			usrname.classList.remove("modal-error");
+			usremail.classList.remove("modal-error");
+			usrtext.classList.remove("modal-error");
 		}
+		
 	});
 	
 	window.addEventListener("keydown", function (evt) {
@@ -34,7 +53,9 @@
 			evt.preventDefault();
 			if (popup.classList.contains("modal-show")) {
 				popup.classList.remove("modal-show");
-				popup.classList.remove("modal-error");
+				usrname.classList.remove("modal-error");
+				usremail.classList.remove("modal-error");
+				usrtext.classList.remove("modal-error");
 			}
 		}
 	});

@@ -1106,6 +1106,22 @@ a {
 
 
 /* cтили для модального окна */	
+@keyframes shake {
+	from {
+		background-color: white;
+		box-shadow: 0 0 3px red;
+	}
+	50% {
+		background-color: rgba(210, 20, 0, 0.6);
+		box-shadow: 0 0 30px red;
+	}
+	to {
+		background-color: white;
+		box-shadow: 0 0 3px red;
+	}
+}
+
+
 .modal {
 	position: fixed;
 	display: none;
@@ -1128,7 +1144,8 @@ a {
 }
 
 .modal-error {
-	background-color: #ff5252;
+	animation: shake 0.3s;
+	animation-iteration-count: 2;
 }
 
 .modal-close {
