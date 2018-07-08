@@ -69,13 +69,12 @@
 					<li class="main-menu-item">
 						<a href="">Гарантия</a>
 					</li>
-					<li class="main-menu-item right-align">
+					<li class="main-menu-item contacts-right-align">
 						<a href="">Контакты</a>
 					</li>
 				</ul>	
 			</header>
 		</div>
-		
 		<div class="container">
 			<h2 class="breadcrumbs-header">Моноподы для селфи</h2>
 			<ul class="breadcrumbs">
@@ -90,7 +89,6 @@
 				</li>
 			</ul>
 		</div>
-		
 		<section class="goods-section">
 			<div class="container flex-horizontal">
 				<aside class="filter">
@@ -100,27 +98,20 @@
 					<form action="https://echo.htmlacademy.ru" method="post">
 						<fieldset class="cost-controls">
 							<legend class="filter-category">Стоимость</legend>
-							
-							 <!-- Полоска бар -->
 							<div class="scale">
 								<div class="bar"></div>
 							</div>
-							<div class="range-controls">	
-							<!-- контрол мин цены -->	
+							<div class="range-controls">
 								<div class="range-toggle range-toggle-min">
 									<label class="filter-cost">от <input class="filter-cost-low" type="text" name="cost-low" value="0">
 									</label>
 								</div>
-								
-							<!-- контрол мах цены -->	
 								<div class="range-toggle range-toggle-max">
 									<label class="filter-cost">до <input class="filter-cost-high" type="text" name="cost-high" value="5000">
 									</label>
 								</div>
 							</div>
-
 						</fieldset>
-						
 						<fieldset>
 							<legend class="filter-category">Цвет</legend>
 							<ul>
@@ -156,7 +147,6 @@
 								</li>
 							</ul>
 						</fieldset>
-					
 						<fieldset>
 							<legend class="filter-category">Bluetooth</legend>
 							<ul>
@@ -177,12 +167,11 @@
 						<button class="btn-striked" id="catalog-show" type="submit">Показать</button>
 					</form>
 				</aside>
-			
 				<section class="catalog">
 					<div class="column-header">
 						<h3>Сортировка:</h3>
 						<ul class="sorting-by-type">
-							<li><a class="catalog-sorting" href="">По цене</a></li>
+							<li><a class="catalog-sorting">По цене</a></li>
 							<li><a class="catalog-sorting" href="">По типу</a></li>
 							<li><a class="catalog-sorting" href="">По популярности</a></li>
 						</ul>
@@ -209,7 +198,6 @@
 									<a href="">Добавить к сравнению</a>
 								</div>
 								<img src="img/item-1.jpg" width="360" height="380" alt="Simple monopod">
-								<span class="sticker-new visually-hidden">New</span>
 							</div>
 							<p class="product-card-description">
 								<a class="card-name" href="selfi.html">Любительская селфи-палка</a>
@@ -223,10 +211,9 @@
 									<a href="">Добавить к сравнению</a>
 								</div>
 								<img src="img/item-2.jpg" width="360" height="380" alt="Simple monopod">
-								<span class="sticker-new visually-hidden">New</span>
 							</div>
 							<p class="product-card-description">
-								<a class="card-name" href="selfi.html">Профессиональная<br>селфи-палка</a>
+								<a class="card-name card-name-short" href="selfi.html">Профессиональная селфи-палка</a>
 								<span class="card-cost">1 500 руб.</span>
 							</p>
 						</li>
@@ -237,7 +224,6 @@
 									<a href="">Добавить к сравнению</a>
 								</div>
 								<img src="img/item-3.jpg" width="360" height="380" alt="Simple monopod">
-								<span class="sticker-new visually-hidden">New</span>
 							</div>
 							<p class="product-card-description">	
 								<a class="card-name" href="selfi.html">Непотопляемая селфи-палка</a>
@@ -245,13 +231,12 @@
 							</p>
 						</li>
 						<li class="product-card">
-							<div class="card-image">
+							<div class="card-image product-card-new">
 								<div class="overlay">
 									<button class="btn-striked">В корзину</button>
 									<a href="">Добавить к сравнению</a>
 								</div>
 								<img src="img/item-4.jpg" width="360" height="380" alt="Simple monopod">
-								<span class="sticker-new">New</span>
 							</div>
 							<p class="product-card-description">
 								<a class="card-name" href="selfi.html">Селфи-палка «Следуй за мной»</a>
@@ -261,7 +246,7 @@
 					</ul>
 					<ul class="pagination">
 						<li>
-							<a class="move-pages left-align" href="">Назад</a>
+							<a class="move-pages left-align move-backward" href="">Назад</a>
 						</li>
 						<li class="pagination-pages">
 							<ul>
@@ -277,13 +262,12 @@
 							</ul>
 						</li>
 						<li>
-							<a class="move-pages right-align" href="">Вперед</a>
+							<a class="move-pages right-align move-forward" href="">Вперед</a>
 						</li>
 					</ul>
 				</section>
 			</div>	
 		</section>
-		
 		<footer class="main-footer">
 			<div class="container">
 				<div class="footer-row">
@@ -292,7 +276,7 @@
 					</div>
 					<ul class="footer-user-menu">
 						<li>
-							<a class="user-menu-item" href="user-profile.html">
+							<a class="user-menu-item user-login" href="user-profile.html">
 								<svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><path fill="#272525" d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/></svg><span>Валентин Петухов</span>
 							</a>
 						</li>
