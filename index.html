@@ -83,7 +83,7 @@
 		<div class="container flex-horizontal">
 			<section class="slider">
 				<div class="slides">
-					<div class="slide">
+					<div class="slide slide-visible">
 						<div class="slide-image">
 							<img src="img/slider-1.png" width="600" height="500" alt="monopod">
 						</div>
@@ -112,7 +112,7 @@
 							</table>
 						</div>	
 					</div>
-					<div class="slide slide-visible">
+					<div class="slide">
 						<div class="slide-image">
 							<img src="img/slider-2.png" width="600" height="500" alt="fitness-braclete">
 						</div>
@@ -325,13 +325,13 @@
 			<div class="container flex-horizontal">
 				<ul class="services-list">
 					<li>
-						<a href="">Доставка</a>
-					</li>
-					<li class="list-item-active">
-						<a>Гарантия</a>
+						<a class="list-delivery">Доставка</a>
 					</li>
 					<li>
-						<a href="">Кредит</a>
+						<a class="list-warranty" href="">Гарантия</a>
+					</li>
+					<li>
+						<a class="list-credit" href="">Кредит</a>
 					</li>
 				</ul>
 				<div class="services-slides">
@@ -342,14 +342,14 @@
 						Ведь мы неплохо заработаем, поднимая его на ваш этаж.
 						</p>
 					</div>
-					<div class="services-slide services-warranty">
+					<div class="services-slide services-warranty visually-hidden">
 						<h2 class="service-header">Гарантия</h2>
 						<p class="service-description">
 							Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>
 							Товар, не дом, конечно же.
 						</p>
 					</div>
-					<div class="services-slide services-credit visually-hidden">
+					<div class="services-slide services-credit">
 						<h2 class="service-header">Кредит</h2>
 						<p class="service-description">
 							Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные<br>условия кредита. Выгодные для нашего банка, разумеется.
@@ -481,17 +481,17 @@
 			<form class="send-form" action="https://echo.htmlacademy.ru" method="post">
 				<div class="inputs-container">
 					<p class="item-half">
-						<label class="modal-label" for="user-name">Ваше имя</label>
+						<label class="modal-label" for="user-name">Ваше имя:</label>
 						<input type="text" name="message-username" id="user-name" placeholder="Имя Фамилия"
 						 pattern="^[a-zA-ZА-Яа-яЁё\s]+$" autocomplete="off" autofocus>
 					</p>
 					<p class="item-half">
-						<label class="modal-label" for="user-email">Ваш e-mail</label>
+						<label class="modal-label" for="user-email">Ваш e-mail:</label>
 						<input type="text" name="message-email" id="user-email" placeholder="email@example.com" 
 						pattern="^[а-яЁёa-z0-9._%+-]+@[а-яЁёa-z0-9.-]+\.[a-zа-яё]{2,4}$" autocomplete="off">
 					</p>
 				</div>
-				<label class="modal-label" for="message-text">Текст письма</label>
+				<label class="modal-label" for="message-text">Текст письма:</label>
 				<textarea rows="7" cols="77" name="message-text" id="message-text" placeholder="В свободной форме" autocomplete="off"></textarea>
 				<button class="btn-striked" type="submit">Отправить</button>
 			</form>
