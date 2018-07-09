@@ -206,7 +206,7 @@ a {
 .search-field::-moz-placeholder {
 	opacity: 0.3;
 	color: #000000;
-} 
+}
 .search-field:-moz-placeholder {
 	opacity: 0.3;
 	color: #000000;
@@ -222,7 +222,7 @@ a {
 .search-field:hover::-moz-placeholder {
 	opacity: 0.6;
 	color: #000000;
-} 
+}
 .search-field:hover:-moz-placeholder {
 	opacity: 0.6;
 	color: #000000;
@@ -238,7 +238,7 @@ a {
 .search-field:focus::-moz-placeholder {
 	opacity: 1;
 	color: #000000;
-} 
+}
 .search-field:focus:-moz-placeholder {
 	opacity: 1;
 	color: #000000;
@@ -677,7 +677,9 @@ a {
 	line-height: 30px;
 	letter-spacing: 0.015em;
 	width: 460px;
+	box-sizing: border-box;
 	margin: 0;
+	padding-right: 20px;
 	color: #464646;
 }
 .services-delivery::after,
@@ -999,7 +1001,6 @@ a {
 	font-family: "Gilroy", "Arial", sans-serif;
 	font-weight: 900;
 	font-size: 18px;
-	line-height: 40px;
 	letter-spacing: 0.205em;
 	text-transform: uppercase;
 	text-align: center;
@@ -1008,8 +1009,7 @@ a {
 	display: inline-block;
 	vertical-align: middle;
 	min-width: 220px;
-	height: 40px;
-	padding: 0 7px 0 13px;
+	padding: 10px 7px 10px 13px;
 	position: relative;
 }
 .link-striked::before {
@@ -1026,7 +1026,7 @@ a {
 	z-index: -1;
 }
 .link-striked:hover,
-.link-striked:focus{
+.link-striked:focus {
 	background-color: #f0c52e;
 	outline: none;
 }
@@ -1045,8 +1045,6 @@ a {
 	text-align: center;
 	color: #000000;
 	background-color: transparent;
-	align-self: flex-start;
-
 	min-width: 200px;
 	height: 40px;
 	border: 0;
@@ -1076,6 +1074,9 @@ a {
 .btn-striked:active {
 	color: rgba(0, 0, 0, 0.3);
 	background-color: #f0c52e;
+}
+.send-form .btn-striked {
+	align-self: flex-start;
 }
 @keyframes pulse {
 	from {
@@ -1155,7 +1156,6 @@ a {
 .modal-close::before {
 	transform: rotate(45deg);
 }
-
 .modal-close::after {
 	transform: rotate(-45deg);
 }
@@ -1209,7 +1209,7 @@ a {
 .send-form textarea::-moz-placeholder {
 	opacity: 0.4;
 	color: #464646;
-} 
+}
 .send-form input:-moz-placeholder,
 .send-form textareat:-moz-placeholder {
 	opacity: 0.4;
@@ -1692,14 +1692,13 @@ a {
 	line-height: 56px;
 	letter-spacing: 0.05em;
 	text-transform: uppercase;
-	text-align: left;
-	padding: 0 0 0 14px;
+	text-align: center;
 	color: rgba(0, 0, 0, 0.2);
 	position: absolute;
 	right: 27px;
 	top: 29px;
 	height: 56px;
-	width: 42px;
+	width: 56px;
 	border: 2px solid rgba(0, 0, 0, 0.1);
 	border-radius: 56px;
 }
