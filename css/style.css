@@ -1039,16 +1039,14 @@ a {
 	font-family: "Gilroy", "Arial", sans-serif;
 	font-weight: 900;
 	font-size: 18px;
-	line-height: 40px;
 	letter-spacing: 0.205em;
 	text-transform: uppercase;
 	text-align: center;
 	color: #000000;
 	background-color: transparent;
 	min-width: 200px;
-	height: 40px;
 	border: 0;
-	padding: 0 7px 0 9px;
+	padding: 10px 7px 10px 9px;
 	position: relative;
 	z-index: 2;
 }
