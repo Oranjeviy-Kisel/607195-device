@@ -1452,6 +1452,14 @@ a {
 	height: 2px;
 	background: #91c92f;
 }
+.range-toggle .filter-cost {
+	font-family: "Gilroy", "Arial", sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 24px;
+	letter-spacing: 0;
+	padding-top: 7px;
+}
 .range-toggle {
 	position: absolute;
 	display: flex;
