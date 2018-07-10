@@ -568,7 +568,7 @@ a {
 		transparent 160px
 	);
 }
-.category-item:active path, 
+.category-item:active path,
 .category-item:active ellipse,
 .category-item:active circle {
 	fill: rgba(0, 0, 0, 0.1);
@@ -1704,7 +1704,7 @@ a {
 	margin-bottom: 5px;
 	background-image: 
 		linear-gradient( 
-			to bottom, 
+			to bottom,
 			rgba(0, 0, 0, 0.08) 70px,
 			transparent 70px
 		),
@@ -1716,7 +1716,7 @@ a {
 }
 .catalog, .filter {
 	background-image: linear-gradient( 
-		to bottom, 
+		to bottom,
 		rgba(0, 0, 0, 0.08) 70px,
 		transparent 70px
 	);
