@@ -1771,16 +1771,18 @@ a {
 	position: absolute;
 	top: -13px;
 	left: -8px;
-	width: 25px;
+	width: 22px;
 	height: 25px;
 	background: url("../img/filter-button.svg") no-repeat 50% 50%;
-	background-size: 23px 23px;
-	background-position: 50% 50%;
+	background-size: auto auto;
+	background-position: 1px 50%;
 	cursor: pointer;
 }
 .range-toggle:active::before {
-	background-size: 25px 25px;
-	background-position: 50% 50%;
+	width: 22px;
+	height: 25px;
+	background-size: 22px 25px;
+	background-position: 0px 50%;
 }
 .range-toggle-min {
 	left: 0;
